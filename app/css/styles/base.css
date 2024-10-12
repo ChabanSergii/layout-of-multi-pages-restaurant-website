@@ -1,0 +1,75 @@
+/* All base styles */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    outline: 2px solid white;
+    max-width: 1460px;
+    margin: 0 auto;
+    font-family: var(--main-font);
+    font-weight: 500;
+    background-color: var(--color-white);
+}
+
+.container {
+    outline: 2px dotted yellow;
+    max-width: 1213px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+* {box-sizing: border-box;}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+/*     text-wrap: balance; */
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+a:visited {
+    color: currentColor;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+img {width: 100%;}
+
+address {
+    font-style: normal;
+}
+
+*:focus-visible {
+    outline: 3px solid var(--color-red);
+    /* outline-offset: 3px; */
+}
+
+select {
+    cursor: pointer;
+}
+
+section:focus,
+footer:focus {
+    outline: none;
+}
