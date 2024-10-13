@@ -31,14 +31,15 @@ function watching() {
             baseDir: path.app
         }
     });
-    watch([path.css.watch], css).on('all', browserSync.reload)
+     /* If use clear CSS */
+    /* watch([path.css.watch], css).on('all', browserSync.reload) */
     watch([path.img.watch], images).on('all', browserSync.reload)
     watch([path.fonts.watch], fonts).on('all', browserSync.stream)
     watch([path.js.watch], scripts).on('all', browserSync.reload)
     watch([path.page.app]).on('change', browserSync.reload)                 /* for pug and page tasks */
     watch([path.page.components, path.page.watch], page).on('all', browserSync.reload)
     /* If use SASS */
-    /* watch([path.css.watch], scss).on('all', browserSync.reload), */
+    watch([path.scss.watch], scss).on('all', browserSync.reload)
     /* If use PUG */
     /* watch([path.pug.watch], pug).on('all', browserSync.reload) */
 }
@@ -66,7 +67,7 @@ function building() {
 
 const build = series(
     clear,
-    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, fontsToSASS)
+    parallel(page, scss, scripts, sprite, images, fonts, fontsToCSS, fontsToSASS)
 );
 
 const dev   = series(

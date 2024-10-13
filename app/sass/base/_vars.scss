@@ -1,22 +1,24 @@
 // There are place for your vars
 
 :root {
-    --container-width: 1200px;
-    --container-padding: 15px;
+    --container-width: 1680px;
+    --container-padding: 0;
 
-    --font-main: 'Poppins', sans-serif;
-    --font-accent: 'Playfair Display', serif;
+    --font-main: 'Open Sans', sans-serif;
+    --font-accent: 'Cormorant Upright', serif;
+    --font-sign: 'Bestermind', serif;
 
-    --page-bg: white;
-    --text-color: black;
-    --accent: #ac182c;
+    --page-bg: rgba(12, 12, 12, 1);
+    --text-color: rgba(220, 202, 135, 1);
+    --accent: rgba(170, 170, 170, 1);
 
     --laptop-size: 1199px;
     --table-size: 959px;
     --mobile-size: 599px;
 }
 
-.dark {
+/* .dark {
     --page-bg: black;
     --text-color: white;
-}
+} */
+

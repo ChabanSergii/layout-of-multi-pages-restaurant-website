@@ -1,6 +1,5 @@
 /* Nac Icon */
-
-.mobile-nav-btn {
+:root {
     --time: 0.1s;
 
     --width: 40px;
@@ -11,7 +10,9 @@
 
     --color: black;
     --radius: 4px;
+}
 
+.mobile-nav-btn {
     /* Fixed height and width */
     /* height: var(--height); */
     /* width: var(--width); */

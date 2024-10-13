@@ -1,10 +1,13 @@
 // Base
 @import "./base/reset";
-@import "./base/vars";
 @import "./base/base";
+@import "./base/vars";
 @import "./base/utils";
-@import "./base/containers";
 @import "./base/sticky-footer";
 
 // Blocks
-@import "blocks/*.scss";
+@import "./blocks/fontsAutoGen";
+@import "./blocks/footer";
+@import "./blocks/header";
+@import "./blocks/mobile-nav";
+/* @import "./blocks/nav-icon"; */
