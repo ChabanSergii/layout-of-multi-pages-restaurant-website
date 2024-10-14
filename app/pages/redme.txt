@@ -6,6 +6,10 @@
 #=include relative/path/to/file.coffee 
 <!--=include relative/path/to/file.html -->
 
+Use next:
+<!--=include file.html -->
+or
+<!--=include blocks/file.html -->
 
 Mo details:
 https://www.npmjs.com/package/gulp-include

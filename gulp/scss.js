@@ -36,7 +36,7 @@ const plumberScssConfig = {
 
 /* SCSS */
 function scss() {
-    return src(path.scss.src, { sourcemaps: app.isDev })
+    return src([path.scss.src, "!normalize.scss"], { sourcemaps: app.isDev })
         .pipe(plumber(plumberScssConfig))
         .pipe(sassGlob())
         .pipe(sass())

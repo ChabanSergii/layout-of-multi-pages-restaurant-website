@@ -48,7 +48,7 @@ select {
     cursor: pointer;
 }
 
-/* *:focus-visible {
-    outline: 3px solid var(--color-red);
+*:focus-visible {
+    outline: 3px solid rgb(230, 107, 107);
     outline-offset: 3px;
-} */
+}
