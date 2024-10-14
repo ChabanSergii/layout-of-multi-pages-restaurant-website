@@ -4,11 +4,18 @@ html {
 }
 
 body {
-    max-width: 1680px;
+    max-width: 1690px;
     min-width: 320px;
     margin-left: auto;
     margin-right: auto;
     background-color: var(--page-bg);
     color: var(--text-color);
     font-family: var(--font-main);
+    outline: 2px solid white;
+}
+
+.container {
+    outline: 2px dotted yellowgreen;
+    padding-left: 192px;
+    padding-right: 192px;
 }

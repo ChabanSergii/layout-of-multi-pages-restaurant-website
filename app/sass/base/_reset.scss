@@ -17,6 +17,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 a, a:visited, a:link {
+    color: var(--text-color);
     text-decoration: none;
     text-wrap: nowrap;
 }
@@ -36,6 +37,7 @@ button {
     padding: 0;
     cursor: pointer;
     text-wrap: nowrap;
+    background: transparent;
 }
 
 img {width: 100%;}

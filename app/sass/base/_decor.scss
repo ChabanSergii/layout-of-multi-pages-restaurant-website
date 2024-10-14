@@ -1,0 +1,12 @@
+.spoon {
+    position: relative;
+    &::after {
+        content: url('../../images/sprite.svg#icon-spoon');
+        width: 40px;
+        height: 8px;
+        left: 45%;
+        right: 0;
+        bottom: -8px;
+        position: absolute;
+    }
+}
