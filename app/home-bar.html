@@ -52,14 +52,19 @@
 
     </main>
     <footer class="footer">
+        <picture><source srcset="./images/section-background.webp" type="image/webp"><img src="./images/section-background.jpg" alt="footer" class="footer__background"></picture>
         <div class="container footer__container">
             <div class="footer__block">
                 <h3 class="footer__title title-small">Contact Us</h3>
                 <address class="footer__address">
                     <ul class="footer__list">
                         <li class="footer__item text-description">9 W&#160;53rd St, New York, NY&#160;10019, USA</li>
-                        <li class="footer__item text-description">+1 212-344-1230</li>
-                        <li class="footer__item text-description">+1 212-555-1230</li>
+                        <li class="footer__item text-description">
+                            <a href="tel:+1 212-344-1230">+1 212-344-1230</a>
+                        </li>
+                        <li class="footer__item text-description">
+                            <a href="tel:+1 212-555-1230">+1 212-555-1230</a>
+                        </li>
                     </ul>
                 </address>
             </div>
@@ -70,13 +75,19 @@
                 </p>
                 <ul class="social__list">
                     <li class="social__item">
-                        <img src="./images/sprite.svg#icon-facebook" class="svg-icon-facebook-dims" alt="icon-facebook">
+                        <a href="#!">
+                            <img src="./images/sprite.svg#icon-facebook" class="svg-icon-facebook-dims" alt="icon-facebook">
+                        </a>
                     </li>
                     <li class="social__item">
-                        <img src="./images/sprite.svg#icon-twitter" class="svg-icon-twitter-dims" alt="icon-twitter">
+                        <a href="#!">
+                            <img src="./images/sprite.svg#icon-twitter" class="svg-icon-twitter-dims" alt="icon-twitter">
+                        </a>
                     </li>
                     <li class="social__item">
-                        <img src="./images/sprite.svg#icon-insta" class="svg-icon-insta-dims footer__svg" alt="icon-insta">
+                        <a href="#!">
+                            <img src="./images/sprite.svg#icon-insta" class="svg-icon-insta-dims footer__svg" alt="icon-insta">
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -86,17 +97,26 @@
                     <ul class="footer__list">
                         <li class="footer__item text-description">
                             <div class="footer__day">Monday-Friday:</div>
-                            <div class="footer__time">08:00 am&#160;-12:00 am</div>
+                            <div class="footer__time" tabindex="0">
+                                <time datetime="08:00">08:00</time>
+                                am&#160;&#8212;
+                                <time datetime="12:00">12:00</time>
+                                am</div>
                         </li>
                         <li class="footer__item text-description">
                             <div class="footer__day">Saturday-Sunday:</div>
-                            <div class="footer__time">07:00am -11:00 pm</div>
+                            <div class="footer__time" tabindex="0">
+                                <time datetime="07:00">07:00</time>
+                                am&#160;&#8212;
+                                <time datetime="11:00">11:00</time>
+                                pm
+                            </div>
                         </li>
                     </ul>
                 </address>
             </div>
-            <div class="copyright text-description">2021 Gerícht. All Rights reserved.</div>
         </div>
+        <div class="copyright text-description">2024 Gerícht. All Rights reserved.</div>
     </footer>
     <!-- <script src=""></script> -->
 </body>
