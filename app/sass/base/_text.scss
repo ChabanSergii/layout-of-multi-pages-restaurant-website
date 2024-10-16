@@ -29,6 +29,15 @@
     text-transform: capitalize;
 }
 
+.subheading {
+    font-family: var(--font-accent);
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.92px;
+    text-transform: capitalize;
+}
+
 .text-description {
     font-family: var(--font-main);
     font-size: 16px;

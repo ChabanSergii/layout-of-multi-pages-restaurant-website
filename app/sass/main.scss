@@ -9,8 +9,16 @@
 @import "./base/decor";
 
 // Blocks
-@import "./blocks/fontsAutoGen";
 @import "./blocks/footer";
 @import "./blocks/header";
-@import "./blocks/mobile-nav";
-@import "./blocks/nav-icon";
+
+// Swiper
+@import "./css/swiper-bundle.min.css";
+
+// Blocks Restaurant
+@import "./blocks/restaurant-hero";
+
+// Elements
+@import "./elements/mobile-nav";
+@import "./elements/nav-icon";
+@import "./elements/button";

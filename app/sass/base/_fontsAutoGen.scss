@@ -20,13 +20,6 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: "OpenSans";
-	font-display: swap;
-	src: url("../../fonts/OpenSans-Italic.woff2") format("woff2"), url("../../fonts/OpenSans-Italic.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
 	font-family: "CormorantUpright";
 	font-display: swap;
 	src: url("../../fonts/CormorantUpright-Regular.woff2") format("woff2"), url("../../fonts/CormorantUpright-Regular.woff") format("woff");
@@ -37,6 +30,13 @@
 	font-family: "OpenSans";
 	font-display: swap;
 	src: url("../../fonts/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/OpenSans-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "OpenSans";
+	font-display: swap;
+	src: url("../../fonts/OpenSans-Italic.woff2") format("woff2"), url("../../fonts/OpenSans-Italic.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }

@@ -1,25 +1,23 @@
 // There are place for your vars
+@import "./fontsAutoGen";
 
 :root {
     --container-width: 1680px;
     --container-padding: 0;
 
-    --font-main: 'Open Sans', sans-serif;
-    --font-accent: 'Cormorant Upright', serif;
+    --font-main: 'OpenSans', sans-serif;
+    --font-accent: 'CormorantUpright', serif;
     --font-sign: 'Bestermind', serif;
 
     --page-bg: rgba(12, 12, 12, 1);
     --text-color: rgba(255, 255, 255, 1);
     --title-color: rgba(220, 202, 135, 1);
     --accent: rgba(170, 170, 170, 1);
+    --text-color-btn: rgba(12, 11, 8, 1);
+    --text-color-pagination: rgba(245, 239, 219, 1);
 
     --laptop-size: 1199px;
     --table-size: 959px;
     --mobile-size: 599px;
 }
-
-/* .dark {
-    --page-bg: black;
-    --text-color: white;
-} */
 

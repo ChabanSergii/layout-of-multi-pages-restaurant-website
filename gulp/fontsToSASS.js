@@ -10,7 +10,7 @@ const srcFolder 		= path.fonts.src;
 
 function fontsStyle() {
 	// Файл стилей подключения шрифтов
-	let fontsFile = `./app/sass/blocks/_fontsAutoGen.scss`;
+	let fontsFile = `./app/sass/base/_fontsAutoGen.scss`;
 	// Проверяем существуют ли файлы шрифтов
 	fs.readdir(`./app/fonts/src/`, function (err, fontsFiles) {
 		if (fontsFiles) {
