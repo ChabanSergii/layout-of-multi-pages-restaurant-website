@@ -11,14 +11,15 @@
 // Swiper
 @import "./css/swiper-bundle.min.css";
 
-// Blocks
-@import "./blocks/header";
-@import "./blocks/footer";
-
-// Block Restaurant
-@import "./blocks/restaurant-hero";
-
 // Elements
 @import "./elements/nav-icon";
 @import "./elements/burger-menu";
 @import "./elements/button";
+
+// Blocks
+@import "./blocks/header";
+@import "./blocks/footer";
+
+// Page Restaurant
+@import "./blocks/restaurant-hero";
+@import "./blocks/restaurant-about";

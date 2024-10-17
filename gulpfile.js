@@ -58,7 +58,7 @@ function building() {
 /* If use CSS */
 /* const build = series(
     clear,
-    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS)
+    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, building)
 ); */
 
 const build = series(
@@ -84,7 +84,6 @@ exports.fontsToSASS   = fontsToSASS;
 exports.page          = page;
 exports.pug           = pug;
 exports.building      = building;
-exports.copyImg       = copyImg;
 exports.scripts       = scripts;
 exports.watching      = watching;
 exports.clear         = clear;

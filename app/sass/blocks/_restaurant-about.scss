@@ -1,0 +1,50 @@
+.about {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 254px;
+    background-image: url("../../images/section-g.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__title {
+    text-align: right;
+    margin-bottom: 49px;
+  }
+
+  &__description {
+    margin-bottom: 32px;
+  }
+
+  &__content-right,
+  &__content {
+    padding-top: 339px;
+    padding-bottom: 328px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  &__content-right {
+    align-items: flex-start;
+  }
+
+  &__content {
+    position: relative;
+
+    .about__description {
+      text-align: right;
+    }
+  }
+
+  &__content::after {
+    content: url("../../images/knife.png");
+    background-image: url("../../images/knife.png");
+    position: absolute;
+    top: 120px;
+    right: -170px;
+  }
+
+}

@@ -1,7 +1,6 @@
 {
   "name": "layout-of-multi-pages-restaurant-website",
-  "version": "2.0.0",
-  "main": "index.js",
+  "version": "2.0.1",
   "homepage": "https://ChabanSergii.github.io/",
   "scripts": {
     "start": "gulp",
