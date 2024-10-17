@@ -4,20 +4,11 @@ $time: 0.1s;
 $width: 40px;
 $height: 30px;
 
-$line-height: 4px;
+$line-height: 3px;
 $spacing: 6px;
 
-$color: black;
+$color: rgba(220, 202, 135, 1);
 $radius: 4px;
-
-.mobile-nav-btn {
-    height: calc($line-height * 3 + $spacing * 2);
-    width: $width;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .nav-icon {
     position: relative;
@@ -29,7 +20,7 @@ $radius: 4px;
 
 .nav-icon::before,
 .nav-icon::after {
-    counter-reset: '';
+    content: '';
     display: block;
 
     position: absolute;

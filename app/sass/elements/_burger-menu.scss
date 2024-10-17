@@ -1,0 +1,105 @@
+.mobile-nav-btn {
+    display: none;
+}
+
+@media (max-width: 769px) {
+    .header__btn-set {
+        display: none;
+    }
+
+    .header__item:last-child {
+        display: block;
+    }
+
+    .mobile-nav-btn {
+        height: calc($line-height * 3 + $spacing * 2);
+        width: $width;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: transparent;
+    }
+
+    .header__nav {
+        background-image: url('./../../images/section-background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .mobile-nav {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        position: fixed;
+        top: 0;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        left: 0;
+    
+        display: block;
+        text-align: left;
+    
+        background-color: #FFF1DA;
+        transition: all 0.2s ease-in;
+    }
+    
+    .mobile-nav--open {
+        top: 0;
+    }
+    
+    .mobile-nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        font-size: 28px;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        transition: all 0.2s ease-in;
+    }
+    
+    .mobile-nav--open {
+        top: 0;
+    }
+    
+    .mobile-nav a {
+        color: #fff;
+    }
+    
+    .mobile-nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        font-size: 28px;
+    
+        & .active {
+            opacity: 0.5;
+        }
+        
+        .header__btn-set {
+            display: block;
+        }
+
+        .header__btn-set > * {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

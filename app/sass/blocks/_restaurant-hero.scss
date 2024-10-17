@@ -35,8 +35,13 @@
         font-style: normal;
     }
 
-    &__link{
+    &__link {
         margin-left: 40px;
+    }
+
+    &__link:hover {
+        color: var(--title-color);
+        transition: color .3s linear;
     }
 }
 

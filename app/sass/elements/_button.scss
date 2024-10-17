@@ -1,4 +1,6 @@
-a.btn {
+@use 'sass:color';
+
+.btn {
     width: 157px;
     padding: 8px;
     display: inline-block;
@@ -10,4 +12,8 @@ a.btn {
     line-height: 175%;
     font-weight: 700;
     letter-spacing: 0.64px;
+}
+
+.btn:hover {
+    background-color: darken(var(--title-color), 30%) !important;
 }

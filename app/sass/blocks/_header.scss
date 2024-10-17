@@ -33,6 +33,17 @@
         @include flex();
     }
 
+    &__btn-login:hover,
+    &__btn-book:hover,
+    &__link:hover {
+        color: var(--title-color);
+        transition: color .3s linear;
+    }
+
+    &__item:last-child {
+        display: none;
+    }
+
     &__btn-login,
     &__btn-book {
         font-family: var(--font-main);
@@ -44,13 +55,12 @@
         color: var(--text-color);
     }
 
+    &__btn-set {
+        @include flex();
+    }
+
     .vertical-line {
-        height: 57px;
-        width: 3px;
         margin-left: 50px;
         margin-right: 50px;
-        background-image: url('../../images/sprite.svg#icon-line');
-        background-repeat: no-repeat;
-        background-position: center;
     }
 }
