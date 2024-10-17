@@ -39,7 +39,7 @@ module.exports = {
 
     scss: {
         src: pathApp + '/sass/*.{scss,sass}',
-        srcapp: pathApp + '/sass/',
+        srcapp: pathApp + '/css/',
         watch: pathApp + '/sass/**/*.{scss,sass}',
         dest: pathDist + '/css',
     },

@@ -34,7 +34,7 @@ function watching() {
      /* If use clear CSS */
     /* watch([path.css.watch], css).on('all', browserSync.reload) */
     watch([path.img.watch], images).on('all', browserSync.reload)
-    watch([path.fonts.watch], fonts).on('all', browserSync.stream)
+    watch([path.fonts.watch], fonts).on('all', browserSync.reload)
     watch([path.js.watch], scripts).on('all', browserSync.reload)
     watch([path.page.app]).on('change', browserSync.reload)                 /* for pug and page tasks */
     watch([path.page.components, path.page.watch], page).on('all', browserSync.reload)
@@ -48,26 +48,22 @@ function watching() {
 /* Constructor */
 function building() {
     return src([
-        'app/css/style.min.css',
-        'app/images/*.{webp,png,avif}',
-        'app/images/sprite.svg',
-        'app/fonts/*.*',
-        'app/js/main.min.js',
-        'app/**/*.html',
-        '!app/images/stack/sprite.stack.html',
+        'app/css/*.css',
+        'app/js/*.js',
     ], {base : './app'})
         .pipe(dest('./dist'))
 }
 
-/* If use SASS */
+
+/* If use CSS */
 /* const build = series(
     clear,
-    parallel(page, scss, scripts, images, fonts)
+    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS)
 ); */
 
 const build = series(
     clear,
-    parallel(page, scss, scripts, sprite, images, fonts, fontsToCSS, fontsToSASS)
+    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, building),
 );
 
 const dev   = series(
@@ -88,9 +84,11 @@ exports.fontsToSASS   = fontsToSASS;
 exports.page          = page;
 exports.pug           = pug;
 exports.building      = building;
+exports.copyImg       = copyImg;
 exports.scripts       = scripts;
 exports.watching      = watching;
 exports.clear         = clear;
+
 
 
 /* Project assembly */

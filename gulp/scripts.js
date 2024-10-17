@@ -1,5 +1,5 @@
 /* Use only recommended task version for good work */
-const {src, dest} = require('gulp');
+const {src, dest}       = require('gulp');
 
 
 /* Configs */
@@ -20,24 +20,6 @@ const plumber           = require('gulp-plumber');
 const notify            = require('gulp-notify');
 
 
-/* JavaScript 1.0*/
-function scripts1() {
-    return src([path.js.src], { sourcemaps: app.isDev })
-        .pipe(plumber({
-            errorHandler: notify.onError(error => ({
-                title: "JavaScript",
-                message: error.message
-            }))
-        }))
-        /* .pipe(concat('main.min.js')) */
-        .pipe(babel()) /* транспилирует новый js code в старый */
-        .pipe(size({ title: "Before uglify" }))
-        .pipe(webpack(app.webpack))
-        /* .pipe(uglify()) возможно удалить???*/
-        .pipe(size({ title: "After uglify" }))
-        .pipe(dest(path.js.dest, { sourcemaps: app.isDev }))
-}
-
 /* JavaScript 2.0*/
 function scripts2() {
     return src([path.js.src], { sourcemaps: app.isDev })
@@ -50,6 +32,7 @@ function scripts2() {
         .pipe(babel()) /* транспилирует новый js code в старый */
         .pipe(size({ title: "Before: " }))
         .pipe(webpack(require('../config/webpack.config.js')))
+        /* .pipe(uglify()) */
         .pipe(size({ title: "After: " }))
         .pipe(dest(path.js.dest, { sourcemaps: app.isDev }))
         .pipe(dest(path.js.srcapp, { sourcemaps: app.isDev }))

@@ -1,0 +1,5 @@
+@import "./styles/normalize.css";
+@import "./styles/base.css";
+@import "./styles/fontsAutoGen.css";
+@import "./styles/sprite.css";
+@import "./styles/styles.css";

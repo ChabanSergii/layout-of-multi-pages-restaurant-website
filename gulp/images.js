@@ -48,10 +48,6 @@ function images() {
         .pipe(newer(path.svg.srcmin))
         .pipe(imagemin(app.imagemin))
         .pipe(dest(path.svg.srcmin))
-
-        /* Run once for del .webp from the app dir */
-        /* .pipe(src('app/images/*.webp', { read: false, encoding: false }))
-        .pipe(clean()) */
 }
 
 module.exports = images;

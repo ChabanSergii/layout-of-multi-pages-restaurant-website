@@ -1,6 +1,6 @@
 {
   "name": "layout-of-multi-pages-restaurant-website",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "homepage": "https://ChabanSergii.github.io/",
   "scripts": {
@@ -58,15 +58,15 @@
     "gulp-webp": "4.0.1",
     "gulp-webp-css": "1.1.0",
     "gulp-webp-html-nosvg": "1.1.1",
-    "normalize.css": "^8.0.1",
     "sass": "1.77.8",
     "style-loader": "4.0.0",
-    "swiper": "^11.1.14",
     "webpack": "5.94.0",
     "webpack-stream": "7.0.0"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
+    "swiper": "^11.1.14",
     "bootstrap": "^5.3.3",
-    "normalize-scss": "7.0.1"
+    "normalize-scss": "^7.0.1"
   }
 }

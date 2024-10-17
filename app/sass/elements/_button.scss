@@ -15,5 +15,6 @@
 }
 
 .btn:hover {
-    background-color: darken(var(--title-color), 30%) !important;
+    background-color: darken(rgba(220, 202, 135, 1), 30%);
+    transition: background-color .3s ease;
 }
