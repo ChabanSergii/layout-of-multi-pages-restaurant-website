@@ -1,26 +1,58 @@
-.spoon {
-    position: relative;
-    &::after {
-        content: url('../../images/sprite.svg#icon-spoon');
-        width: 40px;
-        height: 8px;
-        left: 45%;
-        right: 0;
-        bottom: -8px;
-        position: absolute;
-    }
+@mixin spoon-property {
+  content: url('../../images/sprite.svg#icon-spoon');
+  width: 40px;
+  height: 8px;
+  position: absolute;
 }
 
-.spoon-left {
+.spoon {
+  position: relative;
+  &::after {
+    @include spoon-property();
+    left: 48%;
+    right: 0;
+    bottom: -8px;
+  }
+
+  &-left {
     position: relative;
     &::after {
-        content: url('../../images/sprite.svg#icon-spoon');
-        width: 40px;
-        height: 8px;
-        left: 0;
-        bottom: -8px;
-        position: absolute;
+      @include spoon-property();
+      left: 0;
+      bottom: -8px;
     }
+  }
+
+  &-right {
+    position: relative;
+    &::after {
+      @include spoon-property();
+      left: auto;
+      right: 0;
+      bottom: -55px;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.spoon-crossing-bottom,
+.spoon-crossing-top {
+  position: relative;
+}
+
+.spoon-crossing-bottom::after,
+.spoon-crossing-top::after {
+  content: url("../../images/spoons-crossing.svg");
+  top: -30px;
+  right: 31px;
+  position: absolute;
+}
+
+.spoon-crossing-bottom::after {
+  top: auto;
+  right: auto;
+  left: 0;
+  bottom: 0;
 }
 
 .section__background {

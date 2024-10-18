@@ -1,0 +1,20 @@
+<section class="reservations">
+  <div class="container reservations__container spoon-crossing-top">
+    <div class="reservations__inner">
+      <h5 class="subheading spoon reservations__subheading">
+        Reservations
+      </h5>
+      <h2 class="title reservations__title">Book A Table</h2>
+      <form action="#" id="book__table" method="post" class="reservations__form">
+        <select name="total_guests" id="total_guests" placeholder="1 person" class="reservations__input ">
+          <option value="1 Person" selected>1 Person</option>
+          <option value="2 Person">2 Persons</option>
+          <option value="3 person">4 Persons</option>
+        </select>
+        <input type="date" name="book__date" id="book__date" class="reservations__input reservations__date" required autocomplete="off" value="2024-10-18" min="2024-10-18" max="2024-11-18">
+        <input type="time" name="book__time" id="book__time" class="reservations__input reservations__time" required autocomplete="off" value="13:30" min="11:00" max="22:00">
+        <button type="button" class="btn reservations__btn">Book Now</button>
+      </form>
+    </div>
+  </div>
+</section>

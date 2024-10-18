@@ -1,0 +1,53 @@
+.reservations {
+  &__container {
+    padding: 157px 158px 152px;
+  }
+
+  &__inner {
+    padding: 48px 32px;
+  }
+
+  &__subheading {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 64px 32px;
+  }
+
+  &__input {
+    padding: 16px;
+    border: 1px solid var(--text-color-pagination);
+    background: transparent;
+    font-family: var(--font-accent);
+    color: var(--accent);
+    position: relative;
+  }
+
+  &__input::after {
+    content: url('../../images/sprite.svg#icon-form');
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    right: 16px;
+    position: absolute;
+    font-size: 55px;
+  }
+
+  ::placeholder {
+    color: var(--accent);
+    font-family: var(--font-accent);
+  }
+
+  &__btn {
+    grid-column-start: 2;
+    justify-self: center;
+  }
+}

@@ -29,6 +29,9 @@
 
   &__content-right {
     align-items: flex-start;
+    .spoon-left::after {
+      bottom: 20px;
+    }
   }
 
   &__content {
@@ -45,5 +48,4 @@
     top: 120px;
     right: -170px;
   }
-
 }

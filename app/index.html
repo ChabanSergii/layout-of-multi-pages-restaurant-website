@@ -151,15 +151,16 @@
                         </div>
 
                         <div class="hero__links">
-                            <a href="./../home-bar.html" class="hero__link">#Bar</a>
+                            <a href="./home-bar.html" class="hero__link">#Bar</a>
                             <a href="#!" class="hero__link">#Gericht</a>
                         </div>
                     </div>
                 </section>
+
                 <section class="about section__background">
                   <div class="container about__container">
                     <div class="about__content">
-                      <h2 class="title about__title spoon">About Us</h2>
+                      <h2 class="title about__title spoon-right">About Us</h2>
                       <p class="text-description about__description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate posuere tristique. In&#160;sed odio nec aliquet eu&#160;proin mauris et.
                       </p>
@@ -171,6 +172,27 @@
                         Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse interdum mi&#160;aliquam In&#160;sed odio nec aliquet.
                       </p>
                       <a href="#!" role="button" aria-label="Know More" class="btn about__btn">Know More</a>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="reservations">
+                  <div class="container reservations__container spoon-crossing-top">
+                    <div class="reservations__inner">
+                      <h5 class="subheading spoon reservations__subheading">
+                        Reservations
+                      </h5>
+                      <h2 class="title reservations__title">Book A&#160;Table</h2>
+                      <form action="#" id="book__table" method="post" class="reservations__form">
+                        <select name="total_guests" id="total_guests" placeholder="1 person" class="reservations__input">
+                          <option value="1 Person" selected="selected">1 Person</option>
+                          <option value="2 Person">2 Persons</option>
+                          <option value="3 person">4 Persons</option>
+                        </select>
+                        <input type="date" name="book__date" id="book__date" class="reservations__input reservations__date" required autocomplete="off" value="2024-10-18" min="2024-10-18" max="2024-11-18">
+                        <input type="time" name="book__time" id="book__time" class="reservations__input reservations__time" required autocomplete="off" value="13:30" min="11:00" max="22:00">
+                        <button type="button" class="btn reservations__btn">Book Now</button>
+                      </form>
                     </div>
                   </div>
                 </section>
