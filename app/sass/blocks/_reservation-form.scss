@@ -29,6 +29,7 @@
     font-family: var(--font-accent);
     color: var(--accent);
     position: relative;
+    cursor: pointer;
   }
 
   &__input::after {
@@ -41,13 +42,66 @@
     font-size: 55px;
   }
 
-  ::placeholder {
-    color: var(--accent);
-    font-family: var(--font-accent);
-  }
-
   &__btn {
     grid-column-start: 2;
     justify-self: center;
   }
+}
+
+// Custom Select
+.custom-select-wrapper {
+  position: relative;
+  user-select: none;
+}
+
+.custom-select {
+  padding: 0;
+  position: relative;
+}
+
+.select-trigger {
+  padding: 16px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font-accent);
+}
+
+.custom-options {
+  width: 100%;
+  position: absolute;
+  padding: 16px;
+  background-color: var(--page-bg);
+  border: 1px solid var(--text-color-pagination);
+  display: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.custom-option {
+  display: block;
+  padding: 16px 16px 16px 0;
+  cursor: pointer;
+}
+
+.custom-option:hover {
+  background-color: var(--page-bg);
+  color: lighten(rgba(220, 202, 135, 1), 30%);
+}
+
+.open {
+  display: block;
+}
+
+.air-datepicker {
+  background-color: var(--title-color);
+}
+
+.air-datepicker-cell.-selected-.-current- {
+  background-color: red;
 }

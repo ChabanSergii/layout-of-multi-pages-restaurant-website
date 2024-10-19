@@ -45,15 +45,15 @@ function page() {
 			)
 		)
         .pipe(
-			typograf({
-				locale: ['ru', 'en-US'],
-				htmlEntity: { type: 'digit' },
-				safeTags: [
-					['<\\?php', '\\?>'],
-					['<no-typography>', '</no-typography>'],
-				],
-			})
-		)
+          typograf({
+            locale: ['ru', 'en-US'],
+            htmlEntity: { type: 'digit' },
+            safeTags: [
+              ['<\\?php', '\\?>'],
+              ['<no-typography>', '</no-typography>'],
+            ],
+          })
+        )
         .pipe(dest(path.app))
         .pipe(dest(path.root))
 }

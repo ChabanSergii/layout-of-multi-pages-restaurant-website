@@ -184,14 +184,17 @@
                       </h5>
                       <h2 class="title reservations__title">Book A&#160;Table</h2>
                       <form action="#" id="book__table" method="post" class="reservations__form">
-                        <select name="total_guests" id="total_guests" placeholder="1 person" class="reservations__input">
-                          <option value="1 Person" selected="selected">1 Person</option>
-                          <option value="2 Person">2 Persons</option>
-                          <option value="3 person">4 Persons</option>
-                        </select>
-                        <input type="date" name="book__date" id="book__date" class="reservations__input reservations__date" required autocomplete="off" value="2024-10-18" min="2024-10-18" max="2024-11-18">
-                        <input type="time" name="book__time" id="book__time" class="reservations__input reservations__time" required autocomplete="off" value="13:30" min="11:00" max="22:00">
-                        <button type="button" class="btn reservations__btn">Book Now</button>
+                        <div class="reservations__input custom-select">
+                            <div class="select-trigger">1 Person</div>
+                            <div class="custom-options">
+                                <span class="custom-option" data-value="1">1 Person</span>
+                                <span class="custom-option" data-value="2">2 Persons</span>
+                                <span class="custom-option" data-value="3">4 Persons</span>
+                            </div>
+                        </div>
+                        <input type="text" name="book__date" id="date" class="reservations__input reservations__date" required autocomplete="off">
+                        <input type="text" name="book__time" id="time" class="reservations__input reservations__time" required autocomplete="off">
+                        <button type="submit" class="btn reservations__btn">Book Now</button>
                       </form>
                     </div>
                   </div>
@@ -268,8 +271,11 @@
             </footer>
 
         </div>
-        <script src="./js/index.bundle.js"></script>
-        <script src="./js/modules/swiper-bundle.js"></script>
+
+        <script src="./../dist/js/index.bundle.js"></script>
+        <script src="./js/swiper-bundle.min.js"></script>
+        <script src="./js/custom-select.js"></script>
+
         <!-- Initialize Swiper -->
         <script>
             var swiper = new Swiper(".swiper__restaurant-hero", {
@@ -279,5 +285,6 @@
             },
             });
         </script>
+
     </body>
 </html>

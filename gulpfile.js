@@ -28,7 +28,7 @@ const fontsToSASS = require('./gulp/fontsToSASS.js')
 function watching() {
     browserSync.init({
         server: {
-            baseDir: path.app
+            baseDir: path.root
         }
     });
      /* If use clear CSS */
@@ -49,7 +49,7 @@ function watching() {
 function building() {
     return src([
         'app/css/*.css',
-        'app/js/*.js',
+        'app/js/*.min.js',
     ], {base : './app'})
         .pipe(dest('./dist'))
 }
@@ -63,7 +63,8 @@ function building() {
 
 const build = series(
     clear,
-    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, building),
+    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS),
+    parallel(building),
 );
 
 const dev   = series(

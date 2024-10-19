@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Select */
+    select {
+      padding: 16px;
+      border: 1px solid var(--text-color-pagination);
+      background: transparent;
+      font-family: var(--font-accent);
+      color: var(--accent);
+      position: relative;
+    }
+
+    select option {
+      background-color: var(--page-bg);
+      color: var(--accent);
+      font-size: 16px;
+      padding: 16px;
+      border: 1px solid var(--text-color-pagination);
+    }
+
+    /* Custom Select */
+    .custom-select-wrapper {
+      position: relative;
+      user-select: none;
+    }
+
+    .custom-select {
+      padding: 0;
+      position: relative;
+    }
+
+    .select-trigger {
+      padding: 16px;
+      background: transparent;
+      color: var(--accent);
+      cursor: pointer;
+      font-family: var(--font-accent);
+    }
+
+    .custom-options {
+      width: 100%;
+      position: absolute;
+      padding: 16px;
+      background-color: var(--page-bg);
+      border: 1px solid var(--text-color-pagination);
+      display: none;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .custom-option {
+      display: block;
+      padding: 16px 16px 16px 0;
+      cursor: pointer;
+    }
+
+    .custom-option:hover {
+      background-color: var(--page-bg);
+      color: lighten(rgba(220, 202, 135, 1), 30%);
+    }
+
+    .open {
+      display: block;
+    }
+
+    .reservations__input::after {
+      content: url('../../images/sprite.svg#icon-form');
+      width: 24px;
+      height: 24px;
+      top: -10px;
+      right: 16px;
+      position: absolute;
+      font-size: 55px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Native select-->
+  <!-- <select name="total_guests" id="total_guests" placeholder="1 person" class="reservations__input ">
+          <option value="1 Person" selected>1 Person</option>
+          <option value="2 Person">2 Persons</option>
+          <option value="3 person">4 Persons</option>
+        </select> -->
+
+  <!-- Custom select -->
+  <div class="custom-select reservations__input">
+    <div class="select-trigger">1 Person</div>
+    <div class="custom-options">
+        <span class="custom-option" data-value="1">1 Person</span>
+        <span class="custom-option" data-value="2">2 Persons</span>
+        <span class="custom-option" data-value="3">4 Persons</span>
+    </div>
+  </div>
+</body>
+</html>

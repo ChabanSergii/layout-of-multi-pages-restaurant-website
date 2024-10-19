@@ -13,6 +13,7 @@ const uglify            = require('gulp-uglify-es').default;
 const size              = require('gulp-size');                 /* !!! use only 4.0.1 !!! */
 const babel             = require('gulp-babel');
 const webpack           = require('webpack-stream');
+const newer             = require('gulp-newer');
 
 
 /* Error notification */
@@ -35,7 +36,7 @@ function scripts2() {
         /* .pipe(uglify()) */
         .pipe(size({ title: "After: " }))
         .pipe(dest(path.js.dest, { sourcemaps: app.isDev }))
-        .pipe(dest(path.js.srcapp, { sourcemaps: app.isDev }))
+        /* .pipe(dest(path.js.srcapp, { sourcemaps: app.isDev })) */
 }
 
 
