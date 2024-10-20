@@ -16,6 +16,7 @@
                 <!--=include restaurant-hero.html -->
                 <!--=include restaurant-about.html -->
                 <!--=include reservation-form.html -->
+                <!--=include menu.html -->
             </main>
             <!--=include footer.html -->
         </div>
@@ -24,14 +25,30 @@
         <script src="./../js/swiper-bundle.min.js"></script>
         <script src="./../js/custom_select.bundle.js"></script>
 
-        <!-- Initialize Swiper -->
+        <!-- Swiper Header -->
         <script>
             var swiper = new Swiper(".swiper__restaurant-hero", {
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
+              loop: true,
+              pagination: {
+                  el: ".swiper-pagination",
+                  type: "fraction",
+              },
             });
+        </script>
+
+        <!-- Swiper Menu -->
+        <script>
+          var swiper = new Swiper(".menu__swiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            pauseOnMouseEnter: true,
+            loop: true,
+            autoplay: {
+              delay: 4500,
+              disableOnInteraction: false,
+            },
+          });
+
         </script>
 
     </body>

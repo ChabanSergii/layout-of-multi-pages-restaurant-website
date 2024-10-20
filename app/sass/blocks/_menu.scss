@@ -1,0 +1,32 @@
+.menu {
+  &__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__slider {
+    position: relative;
+    z-index: 100;
+  }
+
+  &__list {
+    padding-top: 293px;
+    position: absolute;
+    padding-left: 145px;
+    top: 0;
+    height: 100%;
+  }
+
+  &__img {
+    background: var(--0C0C0C, #0C0C0C);
+  }
+
+  &__link {
+    display: block;
+    text-align: left;
+  }
+
+  .text_underline {
+    text-decoration: underline;
+  }
+}

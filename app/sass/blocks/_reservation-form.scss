@@ -1,10 +1,13 @@
 .reservations {
   &__container {
     padding: 157px 158px 152px;
+    border: 1px solid var(--border-form-color);
+    box-shadow: var(--border-form-box-shadow);
   }
 
   &__inner {
     padding: 48px 32px;
+
   }
 
   &__subheading {
@@ -32,14 +35,13 @@
     cursor: pointer;
   }
 
-  &__input::after {
-    content: url('../../images/sprite.svg#icon-form');
-    width: 24px;
-    height: 24px;
-    top: -10px;
-    right: 16px;
-    position: absolute;
-    font-size: 55px;
+  &__input,
+  #date,
+  #time {
+    background-image: url('../../images/sprite.svg#icon-form');
+    background-repeat: no-repeat;
+    background-position: right 16px top 16px;
+    background-size: 24px 24px;
   }
 
   &__btn {
@@ -96,4 +98,13 @@
 
 .open {
   display: block;
+}
+
+.air-datepicker {
+  background-color: rgba(12, 12, 12, 1) !important;
+  border: 1px solid var(--text-color-pagination) !important;
+}
+
+.air-datepicker-cell.-selected-.-current- {
+  background-color: rgba(220, 202, 135, 1) !important;
 }

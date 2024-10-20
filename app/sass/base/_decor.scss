@@ -34,12 +34,13 @@
     }
   }
 }
-
+.spoon-crossing-left,
 .spoon-crossing-bottom,
 .spoon-crossing-top {
   position: relative;
 }
 
+.spoon-crossing-left,
 .spoon-crossing-bottom::after,
 .spoon-crossing-top::after {
   content: url("../../images/spoons-crossing.svg");
@@ -53,6 +54,11 @@
   right: auto;
   left: 0;
   bottom: 0;
+}
+
+.spoon-crossing-left::after {
+  right: auto;
+  left: 0;
 }
 
 .section__background {

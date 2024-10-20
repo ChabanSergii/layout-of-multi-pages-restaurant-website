@@ -10,7 +10,8 @@ import localeEn from 'air-datepicker/locale/en';
 new AirDatepicker('#date', {
     locale: localeEn,
     selectedDates: [new Date()],
-    autoClose: true,
+    autoClose: false,
+    position: 'bottom center',
     dateFormat: 'dd/MM/yyyy',
     navTitles: {
       days: '<strong>yyyy </strong> <strong>MMMM<strong>',
@@ -19,11 +20,11 @@ new AirDatepicker('#date', {
 
 });
 
-
 new AirDatepicker('#time', {
   onlyTimepicker: true,
   timepicker: true,
-  autoClose: true,
+  /* autoClose: true, */
+  position: 'bottom center',
   timeFormat: 'HH:mm AA',
   minHours: 11,
   maxHours: 21,
