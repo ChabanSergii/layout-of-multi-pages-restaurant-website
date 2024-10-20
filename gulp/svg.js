@@ -23,9 +23,8 @@ function sprite(done) {
                 }
             }
         }))
-        .pipe(dest(path.svg.srcmin))
-        
-        .pipe(src(path.svg.srcmin, { read: false, encoding: false }))
+        /* .pipe(dest(path.svg.srcmin)) */
+        /* .pipe(src(path.svg.srcmin, { read: false, encoding: false })) */
         .pipe(dest(path.svg.dest))
 }
 

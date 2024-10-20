@@ -54,7 +54,6 @@ function page() {
             ],
           })
         )
-        .pipe(dest(path.app))
         .pipe(dest(path.root))
 }
 

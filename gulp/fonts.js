@@ -28,12 +28,10 @@ function fonts() {
             }))
         }))
         .pipe(newer(path.fonts.result))
-        /* convert to ttf and woff */
         .pipe(fonter(app.fonter))
         .pipe(src(path.fonts.srcttf, { encoding: false, removeBOM: false }))
         .pipe(ttf2woff2())
         .pipe(dest(path.fonts.dest))
-        .pipe(dest(path.fonts.result))
 }
 
 

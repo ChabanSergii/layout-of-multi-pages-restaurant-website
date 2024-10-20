@@ -36,7 +36,6 @@ function scripts2() {
         /* .pipe(uglify()) */
         .pipe(size({ title: "After: " }))
         .pipe(dest(path.js.dest, { sourcemaps: app.isDev }))
-        /* .pipe(dest(path.js.srcapp, { sourcemaps: app.isDev })) */
 }
 
 

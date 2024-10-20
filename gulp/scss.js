@@ -52,11 +52,9 @@ function scss() {
 			)
 		)
         .pipe(dest(path.scss.dest, { sourcemaps: app.isDev }))
-        .pipe(dest(path.scss.srcapp, { sourcemaps: app.isDev }))
         .pipe(rename({ suffix: ".min" }))
         .pipe(csso())
         .pipe(size({ title: "main.min.css" }))
-        .pipe(dest(path.scss.srcapp, { sourcemaps: app.isDev }))
         .pipe(dest(path.scss.dest, { sourcemaps: app.isDev }))
 }
 
