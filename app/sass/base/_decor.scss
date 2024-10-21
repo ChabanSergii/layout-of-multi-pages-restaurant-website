@@ -40,7 +40,7 @@
   position: relative;
 }
 
-.spoon-crossing-left,
+.spoon-crossing-left::after,
 .spoon-crossing-bottom::after,
 .spoon-crossing-top::after {
   content: url("../../images/spoons-crossing.svg");
@@ -58,7 +58,8 @@
 
 .spoon-crossing-left::after {
   right: auto;
-  left: 0;
+  left: 139px;
+  z-index: 1000;
 }
 
 .section__background {
