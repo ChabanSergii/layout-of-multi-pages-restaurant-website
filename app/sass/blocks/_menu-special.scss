@@ -1,0 +1,80 @@
+.menu-special {
+  &__container {
+    padding-top: 152px;
+    padding-bottom: 152px;
+  }
+
+  &__content {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px 32px;
+  }
+
+  &__block {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &__title-drink {
+    margin-bottom: 48px;
+    text-align: center;
+    font-family: var(--font-accent);
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 1.8px;
+    text-transform: capitalize;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+  }
+
+  &__inner-top {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 32px;
+  }
+
+  &__name {
+    flex-shrink: 3;
+    width: 100%;
+    color: var(--title-color);
+  }
+
+  &__inner-top {
+    font-family: var(--font-accent);
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.92px;
+    text-transform: capitalize;
+  }
+
+  &__line {
+    flex-shrink: 1;
+    width: 100%;
+    width: 119px;
+    height: 1px;
+    background-color:var(--menu-lie);
+  }
+
+  &__ingredients,
+  &__bottle {
+    font-family: var(--font-main);
+    color: var(--accent);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.64px;
+  }
+
+  &__btn {
+    grid-column-start: 2;
+    justify-self: center;
+  }
+}
