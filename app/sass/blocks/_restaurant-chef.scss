@@ -39,27 +39,6 @@
       left: 0;
     }
 
-    &__name {
-      margin-bottom: 8px;
-      font-family: var(--font-accent);
-      color: var(--title-color);
-      font-size: 32px;
-      font-weight: 400;
-      line-height: 130%;
-      letter-spacing: 1.28px;
-      text-transform: capitalize;
-    }
-
-    &__role {
-      margin-bottom: 64px;
-      font-family: var(--font-main);
-      color: var(--accent);
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 175%;
-      letter-spacing: 0.64px;
-    }
-
     &__sign {
       max-width: 235px;
       max-height: 83px;

@@ -1,0 +1,49 @@
+.testimony {
+  &__container {
+  }
+
+  &__inner {
+  }
+
+  &__subheading {
+  }
+
+  &__title {
+  }
+
+  &__content {
+  }
+
+  &__list {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 64px 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    width: 189px;
+    margin-right: 14px;
+    align-self: top;
+  }
+
+  &__content {
+    padding: 18px;
+  }
+
+  &__description {
+  }
+
+  &__name {
+  }
+
+  &__role {
+  }
+}
