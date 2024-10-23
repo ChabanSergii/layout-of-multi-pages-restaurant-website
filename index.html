@@ -401,6 +401,7 @@
                     <div class="container">
                         <div class="swiper swiper__restaurant-chef">
                             <div class="swiper-wrapper">
+
                                 <div class="swiper-slide chef__container">
                                     <div class="chef__picture">
                                         <div class="block__gold-top"></div>
@@ -408,23 +409,101 @@
                                         <div class="block__gold-bottom"></div>
                                     </div>
                                     <div class="chef__content">
-                                        <h5 class="subheading spoon-left chef__subheading">Chef&#8217;s Word</h5>
+                                        <h5 class="subheading spoon-left chef__subheading">Chef&apos; s&#160;Word</h5>
                                         <h2 class="title chef__title">
                                           What we&#160;believe in
                                         </h2>
                                         <p class="text-description chef__description">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis quibusdam illo nihil reiciendis cupiditate neque rerum esse nam laboriosam. Eum laborum dolorum praesentium et&#160;minima sequi assumenda rerum velit.
                                         </p>
-                                        <p class="chef__name">Kevin Luo</p>
-                                        <p class="chef__role">Chef &amp; Founder</p>
+                                        <p class="name chef__name">Kevin Luo</p>
+                                        <p class="role chef__role">Chef &amp; Founder</p>
                                         <div class="chef__sign">
-                                          <img src="./images/Kevin-Luo.svg" alt="">
+                                          <img src="./images/Kevin-Luo.svg" alt="chef sign" class="svg-icon-double-quotes-dims">
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="swiper-slide chef__container">
+                                  <div class="chef__picture">
+                                      <div class="block__gold-top"></div>
+                                      <picture><source srcset="./images/kevin-luo.webp" type="image/webp"><img src="./images/kevin-luo.jpg" alt="chef" class="chef__img"></picture>
+                                      <div class="block__gold-bottom"></div>
+                                  </div>
+                                  <div class="chef__content">
+                                      <h5 class="subheading spoon-left chef__subheading">Chef&apos; s&#160;Word</h5>
+                                      <h2 class="title chef__title">
+                                        What we&#160;believe in
+                                      </h2>
+                                      <p class="text-description chef__description">
+                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora perferendis quibusdam illo nihil reiciendis cupiditate neque rerum esse nam laboriosam. Eum laborum dolorum praesentium et&#160;minima sequi assumenda rerum velit.
+                                      </p>
+                                      <p class="name chef__name">Kevin Luo</p>
+                                      <p class="role chef__role">Chef &amp; Founder</p>
+                                      <div class="chef__sign">
+                                        <img src="./images/Kevin-Luo.svg" alt="chef sign" class="chef__sign-img">
+                                      </div>
+                                  </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
+                </section>
+
+                <section class="testimony">
+                  <div class="container testimony__container">
+                    <div class="testimony__inner">
+                      <h5 class="subheading-center spoon testimony__subheading">
+                        Testimony
+                      </h5>
+                      <h2 class="title testimony__title">Happy customers</h2>
+                      <div class="testimony__content">
+                        <ul class="testimony__list">
+                          <li class="testimony__item">
+                            <picture><source srcset="./images/customers-1.webp" type="image/webp"><img src="./images/customers-1.jpg" alt="Sommelier" class="testimony__img"></picture>
+                            <div class="testimony__content">
+                              <p class="text-description testimony__description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in&#160;arcu. Vulputate nulla lobortis mauris eget&#160;sit. Nulla scelerisque scelerisque congue.
+                              </p>
+                              <p class="name testimony__name">Wade Warren</p>
+                              <p class="role testimony__role">Sommelier</p>
+                            </div>
+                          </li>
+                          <li class="testimony__item">
+                            <picture><source srcset="./images/customers-2.webp" type="image/webp"><img src="./images/customers-2.jpg" alt="Jane Cooper" class="testimony__img"></picture>
+                            <div class="testimony__content">
+                              <p class="text-description testimony__description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in&#160;arcu. Vulputate nulla lobortis mauris eget&#160;sit. Nulla scelerisque scelerisque congue.
+                              </p>
+                              <p class="name testimony__name">Jane Cooper</p>
+                              <p class="role testimony__role">Chef</p>
+                            </div>
+                          </li>
+                          <li class="testimony__item">
+                            <picture><source srcset="./images/customers-3.webp" type="image/webp"><img src="./images/customers-3.jpg" alt="Robert Fox" class="testimony__img"></picture>
+                            <div class="testimony__content">
+                              <p class="text-description testimony__description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in&#160;arcu. Vulputate nulla lobortis mauris eget&#160;sit. Nulla scelerisque scelerisque congue.
+                              </p>
+                              <p class="name testimony__name">Robert Fox</p>
+                              <p class="role testimony__role">Chef</p>
+                            </div>
+                          </li>
+                          <li class="testimony__item">
+                            <picture><source srcset="./images/customers-4.webp" type="image/webp"><img src="./images/customers-4.jpg" alt="Brooklyn Simmons" class="testimony__img"></picture>
+                            <div class="testimony__content">
+                              <p class="text-description testimony__description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing sit. auctor sit iaculis in&#160;arcu. Vulputate nulla lobortis mauris eget&#160;sit. Nulla scelerisque scelerisque congue.
+                              </p>
+                              <p class="name testimony__name">Brooklyn Simmons</p>
+                              <p class="role testimony__role">Caterer</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </section>
 
             </main>
@@ -528,6 +607,19 @@
           });
 
         </script>
+
+        <!-- Swiper Chef -->
+        <script>
+          var swiper = new Swiper(".swiper__restaurant-chef", {
+            spaceBetween: 30,
+            loop: true,
+            pauseOnMouseEnter: true,
+            autoplay: {
+              delay: 4500,
+              disableOnInteraction: false,
+            },
+          });
+      </script>
 
     </body>
 </html>
