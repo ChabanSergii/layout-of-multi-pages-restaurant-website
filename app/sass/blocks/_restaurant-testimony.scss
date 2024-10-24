@@ -1,17 +1,17 @@
 .testimony {
-  &__container {
-  }
+  &__ava {
+    align-self: flex-start;
+    position: relative;
 
-  &__inner {
-  }
-
-  &__subheading {
-  }
-
-  &__title {
-  }
-
-  &__content {
+    &::after{
+      content: url('../../images/sprite.svg#icon-double-quotes');
+      position: absolute;
+      display: inline-block;
+      width: 47px;
+      height: 40px;
+      right: 0;
+      bottom: -20px;
+    }
   }
 
   &__list {
@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 64px 0;
+    gap: 64px 32px;
   }
 
   &__item {
@@ -39,11 +39,10 @@
   }
 
   &__description {
+    margin-bottom: 16px;
   }
 
   &__name {
-  }
-
-  &__role {
+    margin-bottom: 4px;
   }
 }
