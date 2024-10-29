@@ -3,7 +3,7 @@ const {src}       		= require('gulp');
 
 
 /* Configs */
-const path              = require('../config/path.js')
+const path              = require('../config/path.js');
 const fs 				= require('fs');
 const srcFolder 		= path.fonts.src;
 

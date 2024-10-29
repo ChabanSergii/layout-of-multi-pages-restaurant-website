@@ -1,10 +1,10 @@
 /* Use only recommended task version for good work */
-const {src}       		= require('gulp');
+const {src}       	= require('gulp');
 
 
 /* Configs */
-const path              = require('../config/path.js')
-const fs 				= require('fs');
+const path          = require('../config/path.js');
+const fs 				    = require('fs');
 const srcFolder 		= path.fonts.src;
 
 

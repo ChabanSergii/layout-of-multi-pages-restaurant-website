@@ -11,7 +11,7 @@ const app               = require('../config/app.js');
 const webp              = require('gulp-webp');                 /* !!! use only 4.0.1 !!! */
 const imagemin          = require('gulp-imagemin');             /* !!! use only 7.1.0 !!! {encoding: false} !!!*/
 const newer             = require('gulp-newer');                /* exclude re-conversion */
-const clean             = require('gulp-clean')
+const clean             = require('gulp-clean');
 const gulpif            = require('gulp-if');
 
 

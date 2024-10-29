@@ -4,24 +4,25 @@ const browserSync                          = require('browser-sync').create();
 
 
 /* Configs */
-const path       = require('./config/path.js')
-const app        = require('./config/app.js')
+const path          = require('./config/path.js');
+const app           = require('./config/app.js');
 /* const gp = require("gulp-load-plugins")(); useful plugin for minify code */
 
 
 /* Plugins */
-const clear       = require('./gulp/clear.js')
-const pug         = require('./gulp/pug.js')
-const page        = require('./gulp/page.js')
-const fonts       = require('./gulp/fonts.js')
-const images      = require('./gulp/images.js')
-const sprite      = require('./gulp/svg.js')
-const css         = require('./gulp/css.js')
-const scss        = require('./gulp/scss.js')
-const scripts     = require('./gulp/scripts.js')
-const avifimg     = require('./gulp/avif.js')
-const fontsToCSS  = require('./gulp/fontsToCSS.js')
-const fontsToSASS = require('./gulp/fontsToSASS.js')
+const clear         = require('./gulp/clear.js');
+const pug           = require('./gulp/pug.js');
+const page          = require('./gulp/page.js');
+const fonts         = require('./gulp/fonts.js');
+const images        = require('./gulp/images.js');
+const sprite        = require('./gulp/svg.js');
+const css           = require('./gulp/css.js');
+const scss          = require('./gulp/scss.js');
+const scripts       = require('./gulp/scripts.js');
+const avifimg       = require('./gulp/avif.js');
+const fontsToCSS    = require('./gulp/fontsToCSS.js');
+const fontsToSASS   = require('./gulp/fontsToSASS.js');
+const processVideos = require('./gulp/video.js');
 
 
 /* Launching tasks based on changes */
@@ -34,6 +35,7 @@ function watching() {
      /* If use clear CSS */
     /* watch([path.css.watch], css).on('all', browserSync.reload) */
     watch([path.img.watch], images).on('all', browserSync.reload)
+    watch([path.video.watch], processVideos).on('all', browserSync.reload)
     watch([path.fonts.watch], fonts).on('all', browserSync.reload)
     watch([path.js.watch], scripts).on('all', browserSync.reload)
     watch([path.page.app]).on('change', browserSync.reload)                 /* for pug and page tasks */
@@ -58,7 +60,7 @@ function building() {
 /* If use CSS */
 /* const build = series(
     clear,
-    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, building)
+    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, processVideos, building)
 ); */
 
 const build = series(
@@ -88,6 +90,7 @@ exports.building      = building;
 exports.scripts       = scripts;
 exports.watching      = watching;
 exports.clear         = clear;
+exports.processVideos = processVideos;
 
 
 

@@ -1,0 +1,39 @@
+.video-player {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 8px 8px;
+  color: white;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#progressBar {
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+#volumeControl {
+  width: 80px;
+}

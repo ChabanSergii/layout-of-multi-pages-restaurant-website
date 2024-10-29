@@ -24,7 +24,7 @@ module.exports = {
         src: pathApp + '/fonts/src/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
         watch: pathApp + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
         dest: pathDist + '/fonts',
-        
+
         srcttf: pathApp + '/fonts/src/*.ttf',
         result: pathApp + '/fonts',
     },
@@ -55,6 +55,12 @@ module.exports = {
         src: pathApp + '/images/src/*.{png,jpg,jpeg,gif,svg}',
         watch: pathApp + '/images/**/*.{png,jpg,jpeg,gif,svg}',
         dest: pathDist + '/images',
+    },
+
+    video: {
+      src: pathApp + '/video/*.*',
+      watch: pathApp + '/video/*.*',
+      dest: pathDist + '/video',
     },
 
     svg: {

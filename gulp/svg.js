@@ -3,13 +3,13 @@ const {src, dest}       = require('gulp');
 
 
 /* Configs */
-const path              = require('../config/path.js')
-const app               = require('../config/app.js')
+const path              = require('../config/path.js');
+const app               = require('../config/app.js');
 
 
 /* Plugins */
 const svgSprite         = require('gulp-svg-sprite');
-const clean             = require('gulp-clean')
+const clean             = require('gulp-clean');
 
 
 /* SVG */

@@ -3,8 +3,8 @@ const {src, dest}       = require('gulp');
 
 
 /* Configs */
-const path              = require('../config/path.js')
-const app               = require('../config/app.js')
+const path              = require('../config/path.js');
+const app               = require('../config/app.js');
 
 
 /* Plugins */
