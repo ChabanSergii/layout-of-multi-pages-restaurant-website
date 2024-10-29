@@ -216,7 +216,7 @@
                               <a href="#!" class="title menu__link">Desserts Menu</a>
                             </li>
                           </ul>
-                          <picture><source srcset="./images/restaurant-background-glass.webp" type="image/webp"><img src="./images/restaurant-background-glass.jpg" alt="bar menu" class="menu__img" loading="lazy"></picture>
+                          <picture><source srcset="./images/restaurant-background-glass.webp" type="image/webp"><img src="./images/restaurant-background-glass.jpg" loading="lazy" alt="bar menu" class="menu__img"></picture>
                         </div>
 
                         <div class="swiper-slide menu__slider">
@@ -231,7 +231,7 @@
                               <a href="#!" class="title menu__link">Desserts Menu</a>
                             </li>
                           </ul>
-                          <picture><source srcset="./images/restaurant-background-food.webp" type="image/webp"><img src="./images/restaurant-background-food.jpg" alt="food menu" class="menu__img" loading="lazy"></picture>
+                          <picture><source srcset="./images/restaurant-background-food.webp" type="image/webp"><img src="./images/restaurant-background-food.jpg" loading="lazy" alt="food menu" class="menu__img"></picture>
                         </div>
 
                         <div class="swiper-slide menu__slider">
@@ -246,7 +246,7 @@
                               <a href="#!" class="title menu__link text-underline">Desserts Menu</a>
                             </li>
                           </ul>
-                          <picture><source srcset="./images/restaurant-background-dessert.webp" type="image/webp"><img src="./images/restaurant-background-dessert.jpg" alt="desserts menu" class="menu__img" loading="lazy"></picture>
+                          <picture><source srcset="./images/restaurant-background-dessert.webp" type="image/webp"><img src="./images/restaurant-background-dessert.jpg" loading="lazy" alt="desserts menu" class="menu__img"></picture>
                         </div>
 
                       </div>
@@ -325,7 +325,7 @@
                         </div>
 
                         <div class="menu-special__picture">
-                          <picture><source srcset="./images/restaurant-shaker.webp" type="image/webp"><img src="./images/restaurant-shaker.jpg" alt="drink" class="menu-special__img"></picture>
+                          <picture><source srcset="./images/restaurant-shaker.webp" type="image/webp"><img src="./images/restaurant-shaker.jpg" loading="lazy" alt="drink" class="menu-special__img"></picture>
                         </div>
 
                         <div class="menu-special__block">
@@ -405,7 +405,7 @@
                                 <div class="swiper-slide chef__container">
                                     <div class="chef__picture">
                                         <div class="block__gold-top"></div>
-                                        <picture><source srcset="./images/restaurant-chef.webp" type="image/webp"><img src="./images/restaurant-chef.jpg" alt="chef" class="chef__img"></picture>
+                                        <picture><source srcset="./images/restaurant-chef.webp" type="image/webp"><img src="./images/restaurant-chef.jpg" loading="lazy" alt="chef" class="chef__img"></picture>
                                         <div class="block__gold-bottom"></div>
                                     </div>
                                     <div class="chef__content">
@@ -419,7 +419,7 @@
                                         <p class="name chef__name">Kevin Luo</p>
                                         <p class="role chef__role">Chef &amp; Founder</p>
                                         <div class="chef__sign">
-                                          <img src="./images/Kevin-Luo.svg" alt="chef sign" class="svg-icon-double-quotes-dims">
+                                          <img src="./images/Kevin-Luo.svg" loading="lazy" alt="chef sign" class="svg-icon-double-quotes-dims">
                                         </div>
                                     </div>
                                 </div>
@@ -514,6 +514,25 @@
                   </div>
                 </section>
 
+                <section class="preview spoon-crossing-left">
+                  <div class="container preview__container">
+                      <div class="video-player">
+                        <video id="video" src="./video/test.mp4" poster="../../images/section-background-play.jpg"></video>
+
+                        <!-- Центральная кнопка Play/Pause -->
+                        <div id="playPauseCenter" class="play-pause-center"></div>
+
+                        <!-- Кастомные элементы управления -->
+                        <div class="controls">
+                            <input type="range" id="progressBar" value="0" max="100">
+                            <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+                            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+                            <button id="fullscreen" class="control-button">Fullscreen</button>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+
             </main>
             <footer class="footer section__background">
                 <div class="container footer__container">
@@ -589,6 +608,7 @@
         <script src="./js/index.bundle.js"></script>
         <script src="./js/swiper-bundle.min.js"></script>
         <script src="./js/custom_select.bundle.js"></script>
+        <script src="./js/video_player.bundle.js"></script>
 
         <!-- Swiper Header -->
         <script>
