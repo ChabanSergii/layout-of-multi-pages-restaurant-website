@@ -3,12 +3,14 @@
       <div class="video-player">
         <video id="video" src="../../video/test.mp4" poster="../../images/section-background-play.jpg"></video>
 
+        <!-- Центральная кнопка Play/Pause -->
+        <div id="playPauseCenter" class="play-pause-center"></div>
+
         <!-- Кастомные элементы управления -->
         <div class="controls">
-            <button id="playPause" class="control-button">Play</button>
             <input type="range" id="progressBar" value="0" max="100">
             <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
-            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
             <button id="fullscreen" class="control-button">Fullscreen</button>
         </div>
     </div>

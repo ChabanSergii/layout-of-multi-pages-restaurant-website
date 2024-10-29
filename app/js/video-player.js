@@ -1,5 +1,5 @@
 const video = document.getElementById('video');
-const playPauseButton = document.getElementById('playPause');
+const playPauseCenterButton = document.getElementById('playPauseCenter');
 const progressBar = document.getElementById('progressBar');
 const volumeControl = document.getElementById('volumeControl');
 const fullscreenButton = document.getElementById('fullscreen');
@@ -13,9 +13,10 @@ function formatTime(seconds) {
     return `${minutes < 10 ? '0' : ''}${minutes}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
-// Обновление кнопки Play/Pause
+// Обновление центральной кнопки Play/Pause
 function updatePlayPauseButton() {
-    playPauseButton.textContent = video.paused ? 'Play' : 'Pause';
+    playPauseCenterButton.classList.toggle('play', video.paused);
+    playPauseCenterButton.classList.toggle('pause', !video.paused);
 }
 
 // Обновление прогресса видео
@@ -25,8 +26,8 @@ function updateProgress() {
     currentTimeDisplay.textContent = formatTime(video.currentTime);
 }
 
-// Запуск или пауза видео
-playPauseButton.addEventListener('click', () => {
+// Запуск или пауза видео при нажатии на центральную кнопку
+playPauseCenterButton.addEventListener('click', () => {
     if (video.paused) {
         video.play();
     } else {
@@ -35,9 +36,10 @@ playPauseButton.addEventListener('click', () => {
     updatePlayPauseButton();
 });
 
-// Обновление при загрузке метаданных видео (например, его продолжительность)
+// Обновление при загрузке метаданных видео
 video.addEventListener('loadedmetadata', () => {
     durationDisplay.textContent = formatTime(video.duration);
+    updatePlayPauseButton();
 });
 
 // Обновление прогресс-бара и времени
@@ -63,5 +65,9 @@ fullscreenButton.addEventListener('click', () => {
     }
 });
 
-// Обновление кнопки при завершении видео
+// Обновление центральной кнопки при завершении видео
 video.addEventListener('ended', updatePlayPauseButton);
+
+// Скрытие и показ центральной кнопки Play/Pause при воспроизведении/постановке на паузу
+video.addEventListener('play', updatePlayPauseButton);
+video.addEventListener('pause', updatePlayPauseButton);

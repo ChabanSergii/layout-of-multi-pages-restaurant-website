@@ -1,32 +1,57 @@
+.preview {
+  &__container {
+    padding: 0;
+  }
+}
+
 .video-player {
   position: relative;
   width: 100%;
-  max-width: 640px;
   margin: auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+  &:hover .controls {
+    opacity: 1;
+  }
+
+  &:hover .play-pause-center {
+    opacity: 1;
+  }
 }
 
 video {
   width: 100%;
-  border-radius: 8px;
 }
 
 .controls {
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 0 0 8px 8px;
-  color: white;
+  background-color: var(--controls-background);
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
 .control-button {
   background: none;
   border: none;
-  color: white;
+  color: var(--accent);
   cursor: pointer;
   font-size: 16px;
+}
+
+input[type="range"] {
+  accent-color: var(--title-color);
+}
+
+#playPause {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 #progressBar {
@@ -36,4 +61,50 @@ video {
 
 #volumeControl {
   width: 80px;
+}
+
+.play-pause-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--title-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: var(--controls-background);
+  transition: transform 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.play-pause-center.play::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 29px solid var(--text-color);
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+}
+
+.play-pause-center.pause::before {
+  content: '';
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background-color: var(--text-color);
+}
+
+.play-pause-center.pause {
+  opacity: 0;
+}
+
+.play-pause-center:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform 0.3s linear;
 }
