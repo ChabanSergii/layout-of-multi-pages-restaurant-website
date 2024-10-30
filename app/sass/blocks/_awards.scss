@@ -1,0 +1,55 @@
+.awards {
+  &__container {
+    padding-top: 128px;
+    padding-bottom: 128px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__content {
+    padding-top: 118px;
+    padding-right: 16px;
+  }
+
+  &__title {
+    margin-top: 26px;
+    margin-bottom: 74px;
+    text-align: left;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px 64px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 32px;
+  }
+
+  &__subheading-gold {
+    padding-bottom: 8px;
+    color: var(--title-color);
+  }
+
+  &__picture {
+    margin-left: 95px;
+    position: relative;
+
+
+    &::after {
+      content: url('../../images/section-g-white.svg');
+      left: 0;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+
+  &__img {
+    max-height: 691px;
+  }
+
+}

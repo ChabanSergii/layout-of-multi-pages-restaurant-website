@@ -60,12 +60,13 @@ function building() {
 /* If use CSS */
 /* const build = series(
     clear,
-    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, processVideos, building)
+    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, processVideos)
+    parallel(building),
 ); */
 
 const build = series(
     clear,
-    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS),
+    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos),
     parallel(building),
 );
 
