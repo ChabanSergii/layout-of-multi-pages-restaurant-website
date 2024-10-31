@@ -4,7 +4,7 @@ const config = {
         index: './app/js/index.js',
         custom_select: './app/js/custom_select.js',
         video_player: './app/js/video-player.js',
-
+        view_more: './app/js/view-more.js',
         /* bootstrapMin: './node_modules/bootstrap/dist/js/bootstrap.min.js', */
         /* new-page-name: './app/js/new-page-name.js', */
     },

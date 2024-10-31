@@ -12,7 +12,7 @@ const webp              = require('gulp-webp');                 /* !!! use only 
 const imagemin          = require('gulp-imagemin');             /* !!! use only 7.1.0 !!! {encoding: false} !!!*/
 const newer             = require('gulp-newer');                /* exclude re-conversion */
 const clean             = require('gulp-clean');
-const gulpif            = require('gulp-if');
+const gulpIf            = require('gulp-if');
 
 
 /* Error notification */
@@ -21,7 +21,7 @@ const notify            = require('gulp-notify');
 
 
 /* Images */
-function images() {
+/* function images() {
     return src(path.img.src, {encoding: false})
         .pipe(plumber({
             errorHandler: notify.onError(error => ({
@@ -39,9 +39,37 @@ function images() {
 
         .pipe(src(path.img.src, {encoding: false}))
         .pipe(newer(path.img.dest))
-        /* .pipe(gulpif(app.isProd, imagemin(app.imagemin))) */
         .pipe(imagemin(app.imagemin))
         .pipe(dest(path.img.dest))
+} */
+
+function images() {
+  // Обработка форматов, отличных от .webp
+  src(path.img.src, { encoding: false })
+      .pipe(plumber({
+          errorHandler: notify.onError(error => ({
+              title: "Images",
+              message: error.message
+          }))
+      }))
+      .pipe(newer(path.img.dest))
+      .pipe(gulpIf(file => !file.extname.endsWith('.webp'), imagemin(app.imagemin))) // Оптимизация не для .webp
+      .pipe(dest(path.img.dest));
+
+  // Обработка .webp изображений
+  return src(path.img.src, { encoding: false })
+      .pipe(plumber({
+          errorHandler: notify.onError(error => ({
+              title: "WebP Images",
+              message: error.message
+          }))
+      }))
+      .pipe(newer(path.img.dest))
+      .pipe(webp({
+          quality: 90,
+          method: 6
+      }))
+      .pipe(dest(path.img.dest));
 }
 
 

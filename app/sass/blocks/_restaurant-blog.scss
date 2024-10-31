@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .blog {
   &__container {
     padding-top: 149px;
@@ -51,5 +53,16 @@
     font-size: 16px;
     line-height: 175%;
     letter-spacing: 0.64px;
+
+    &:hover {
+      color: lighten(rgba(220, 202, 135, 1), 15%);
+      transition: color .3s linear;
+    }
   }
+}
+
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
