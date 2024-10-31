@@ -1,0 +1,1 @@
+document.getElementById("show-more-btn").addEventListener("click",(function(){const e=document.querySelectorAll(".more-content");let t=!1;e.forEach((e=>{e.style.maxHeight&&(t=!0)})),e.forEach((e=>{e.style.maxHeight=t?null:e.scrollHeight+"px"})),this.textContent=t?"View More":"Hidden"}));
