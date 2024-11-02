@@ -23,6 +23,19 @@ const avifimg       = require('./gulp/avif.js');
 const fontsToCSS    = require('./gulp/fontsToCSS.js');
 const fontsToSASS   = require('./gulp/fontsToSASS.js');
 const processVideos = require('./gulp/video.js');
+const todo          = require('gulp-todo');
+
+
+// Creating TODO.md
+function todoFinder() {
+  return src([path.js.todo, path.scss.todo, path.page.todo])
+      .pipe(todo({
+          fileName: 'TODO.md',       // Название файла со списком задач
+          verbose: true              // Показывать в консоли список найденных TODO
+      }))
+      .pipe(dest(path.app));         // Сохранение в корне проекта
+};
+
 
 
 /* Launching tasks based on changes */
@@ -32,7 +45,6 @@ function watching() {
             baseDir: path.root
         }
     });
-     /* If use clear CSS */
     /* watch([path.css.watch], css).on('all', browserSync.reload) */
     watch([path.img.watch], images).on('all', browserSync.reload)
     watch([path.video.watch], processVideos).on('all', browserSync.reload)
@@ -40,8 +52,8 @@ function watching() {
     watch([path.js.watch], scripts).on('all', browserSync.reload)
     watch([path.page.app]).on('change', browserSync.reload)                 /* for pug and page tasks */
     watch([path.page.components, path.page.watch], page).on('all', browserSync.reload)
-    /* If use SASS */
     watch([path.scss.watch], scss).on('all', browserSync.reload)
+    watch([path.js.todo, path.scss.todo, path.page.todo], todoFinder)
     /* If use PUG */
     /* watch([path.pug.watch], pug).on('all', browserSync.reload) */
 }
@@ -66,7 +78,7 @@ function building() {
 
 const build = series(
     clear,
-    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos),
+    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos, todoFinder),
     parallel(building),
 );
 
@@ -92,6 +104,7 @@ exports.scripts       = scripts;
 exports.watching      = watching;
 exports.clear         = clear;
 exports.processVideos = processVideos;
+exports.todoFinder    = todoFinder;
 
 
 

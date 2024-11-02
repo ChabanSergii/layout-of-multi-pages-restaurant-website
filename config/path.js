@@ -8,6 +8,7 @@ module.exports = {
 
     page: {
         app: pathApp + '/*.html',
+        todo: pathApp + '/pages/**/*.html',
         src: pathApp + '/pages/*.html',
         watch: pathApp + '/pages/**/*.html',
         components: pathApp + '/components/**/*.html',
@@ -39,6 +40,7 @@ module.exports = {
 
     scss: {
         src: pathApp + '/sass/*.{scss,sass}',
+        todo: pathApp + '/sass/**/*.{scss,sass}',
         srcapp: pathApp + '/css/',
         watch: pathApp + '/sass/**/*.{scss,sass}',
         dest: pathDist + '/css',
@@ -46,6 +48,7 @@ module.exports = {
 
     js: {
         src: pathApp + '/js/*.js',
+        todo: pathApp + '/js/**/*.js',
         watch: pathApp + '/js/**/*.js',
         srcapp: pathApp + '/js/',
         dest: pathDist + '/js',

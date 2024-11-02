@@ -52,6 +52,7 @@
     "gulp-shorthand": "1.1.0",
     "gulp-size": "4.0.1",
     "gulp-svg-sprite": "2.0.3",
+    "gulp-todo": "^7.1.1",
     "gulp-ttf2woff2": "4.0.1",
     "gulp-typograf": "4.1.0",
     "gulp-uglify-es": "3.0.0",
