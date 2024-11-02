@@ -176,8 +176,8 @@
                   </div>
                 </section>
 
-                <section class="reservations">
-                  <div class="container reservations__container spoon-crossing-top">
+                <section class="reservations spoon-crossing-top-right">
+                  <div class="container reservations__container">
                     <div class="reservations__inner">
                       <h5 class="subheading-center spoon reservations__subheading">
                         Reservations
@@ -200,7 +200,7 @@
                   </div>
                 </section>
 
-                <section class="menu spoon-crossing-left">
+                <section class="menu spoon-crossing-top-left">
                   <div class="container menu__container">
                     <div class="swiper menu__swiper">
                       <div class="swiper-wrapper">
@@ -397,7 +397,7 @@
                   </div>
                 </section>
 
-                <section class="chef section__background spoon-crossing-bottom">
+                <section class="chef section__background spoon-crossing-bottom-right">
                     <div class="container">
                         <div class="swiper swiper__restaurant-chef">
                             <div class="swiper-wrapper">
@@ -514,7 +514,7 @@
                   </div>
                 </section>
 
-                <section class="preview spoon-crossing-left">
+                <section class="preview spoon-crossing-top-left">
                   <div class="container preview__container">
                       <div class="video-player">
                         <video id="video" src="./video/test.mp4" poster="../../images/section-background-play.jpg"></video>
@@ -584,13 +584,13 @@
                       </ul>
                     </div>
                     <div class="awards__picture">
-                      <picture><source srcset="./images/restaurant-awards-dish.webp" type="image/webp"><img src="./images/restaurant-awards-dish.jpg" alt="beef with tomatoes" class="awards__img"></picture>
+                      <picture><source srcset="./images/restaurant-awards-dish.webp" type="image/webp"><img src="./images/restaurant-awards-dish.jpg" alt="beef with tomatoes" class="awards__img" loading="lazy"></picture>
                     </div>
                   </div>
                 </section>
 
                 <section class="blog">
-                  <div class="container blog__container">
+                  <div class="container blog__container spoon-crossing-bottom-right">
                     <h5 class="subheading-center spoon blog__subheading">
                       Blogs
                     </h5>
@@ -599,7 +599,7 @@
 
                       <article class="blog__card">
                         <figure class="blog__picture">
-                          <picture><source srcset="./images/restaurant-blogs-dish-1.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-1.jpg" alt="dish #1" class="blog__img"></picture>
+                          <picture><source srcset="./images/restaurant-blogs-dish-1.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-1.jpg" alt="dish #1" class="blog__img" loading="lazy"></picture>
                         </figure>
                         <div class="blog__inner">
                           <time datetime="2024-03-16" class="blog__date">16 Apr 2024</time>
@@ -613,7 +613,7 @@
 
                       <article class="blog__card">
                         <figure class="blog__picture">
-                          <picture><source srcset="./images/restaurant-blogs-dish-2.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-2.jpg" alt="dish #2" class="blog__img"></picture>
+                          <picture><source srcset="./images/restaurant-blogs-dish-2.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-2.jpg" alt="dish #2" class="blog__img" loading="lazy"></picture>
                         </figure>
                         <div class="blog__inner">
                           <time datetime="2024-05-23" class="blog__date">23 May 2024</time>
@@ -627,7 +627,7 @@
 
                       <article class="blog__card">
                         <figure class="blog__picture">
-                          <picture><source srcset="./images/restaurant-blogs-dish-3.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-3.jpg" alt="dish #3" class="blog__img"></picture>
+                          <picture><source srcset="./images/restaurant-blogs-dish-3.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-3.jpg" alt="dish #3" class="blog__img" loading="lazy"></picture>
                         </figure>
                         <div class="blog__inner">
                           <time datetime="2024-08-06" class="blog__date">06 Aug 2024</time>
@@ -641,7 +641,7 @@
 
                       <article class="blog__card more-content">
                         <figure class="blog__picture">
-                          <picture><source srcset="./images/restaurant-blogs-dish-1.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-1.jpg" alt="dish #1" class="blog__img"></picture>
+                          <picture><source srcset="./images/restaurant-blogs-dish-1.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-1.jpg" alt="dish #1" class="blog__img" loading="lazy"></picture>
                         </figure>
                         <div class="blog__inner">
                           <time datetime="2024-03-16" class="blog__date">16 Apr 2024</time>
@@ -655,7 +655,7 @@
 
                       <article class="blog__card more-content">
                         <figure class="blog__picture">
-                          <picture><source srcset="./images/restaurant-blogs-dish-2.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-2.jpg" alt="dish #2" class="blog__img"></picture>
+                          <picture><source srcset="./images/restaurant-blogs-dish-2.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-2.jpg" alt="dish #2" class="blog__img" loading="lazy"></picture>
                         </figure>
                         <div class="blog__inner">
                           <time datetime="2024-05-23" class="blog__date">23 May 2024</time>
@@ -669,7 +669,7 @@
 
                       <article class="blog__card more-content">
                         <figure class="blog__picture">
-                          <picture><source srcset="./images/restaurant-blogs-dish-3.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-3.jpg" alt="dish #3" class="blog__img"></picture>
+                          <picture><source srcset="./images/restaurant-blogs-dish-3.webp" type="image/webp"><img src="./images/restaurant-blogs-dish-3.jpg" alt="dish #3" class="blog__img" loading="lazy"></picture>
                         </figure>
                         <div class="blog__inner">
                           <time datetime="2024-08-06" class="blog__date">06 Aug 2024</time>
@@ -684,6 +684,54 @@
                     </div>
                     <div class="menu-special__btn">
                       <button id="show-more-btn" class="btn menu-special__link">View More</button>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="instagram section__background spoon-crossing-bottom-left">
+                  <div class="container instagram__container">
+
+                    <div class="instagram__content">
+                      <h5 class="subheading spoon-left instagram__subheading">Instagram</h5>
+                      <h2 class="title instagram__title">
+                        Photo Gallery
+                      </h2>
+                      <p class="text-description instagram__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.
+                      </p>
+                      <a href="#!" role="button" aria-label="view more" class="btn instagram__btn">View More</a>
+                    </div>
+
+                    <div class="instagram__slider">
+                      <div class="swiper instagram-swiper">
+                        <div class="swiper-wrapper instagram__wrapper">
+                          <div class="swiper-slide instagram__slide">
+                            <a href="#!" class="instagram__link">
+                              <picture><source srcset="./images/restaurant-insta-dish-1.webp" type="image/webp"><img src="./images/restaurant-insta-dish-1.jpg" alt="dish #1" class="instagram__img" loading="lazy"></picture>
+                            </a>
+                          </div>
+                          <div class="swiper-slide instagram__slide">
+                            <a href="#!" class="instagram__link">
+                              <picture><source srcset="./images/restaurant-insta-dish-2.webp" type="image/webp"><img src="./images/restaurant-insta-dish-2.jpg" alt="dish #2" class="instagram__img" loading="lazy"></picture>
+                            </a>
+                          </div>
+                          <div class="swiper-slide instagram__slide">
+                            <a href="#!" class="instagram__link">
+                              <picture><source srcset="./images/restaurant-insta-dish-3.webp" type="image/webp"><img src="./images/restaurant-insta-dish-3.jpg" alt="dish #3" class="instagram__img" loading="lazy"></picture>
+                            </a>
+                          </div>
+                          <div class="swiper-slide instagram__slide">
+                            <a href="#!" class="instagram__link">
+                              <picture><source srcset="./images/restaurant-insta-dish-4.webp" type="image/webp"><img src="./images/restaurant-insta-dish-4.jpg" alt="dish #4" class="instagram__img" loading="lazy"></picture>
+                            </a>
+                          </div>
+                          <div class="swiper-slide instagram__slide">
+                            <a href="#!" class="instagram__link">
+                              <picture><source srcset="./images/restaurant-insta-dish-5.webp" type="image/webp"><img src="./images/restaurant-insta-dish-5.jpg" alt="dish #5" class="instagram__img" loading="lazy"></picture>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -803,7 +851,15 @@
               disableOnInteraction: false,
             },
           });
-      </script>
+        </script>
 
+        <!-- Swiper Instagram -->
+        <script>
+          var swiper = new Swiper(".instagram-swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 32,
+            freeMode: true,
+          });
+        </script>
     </body>
 </html>
