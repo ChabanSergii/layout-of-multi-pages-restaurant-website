@@ -6,6 +6,9 @@ html, body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    background-image: url("../../images/two-lines.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
 }
 
 main {
