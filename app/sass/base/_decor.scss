@@ -34,31 +34,39 @@
     }
   }
 }
-.spoon-crossing-left,
-.spoon-crossing-bottom,
-.spoon-crossing-top {
+.spoon-crossing-top-left,
+.spoon-crossing-top-right,
+.spoon-crossing-bottom-left,
+.spoon-crossing-bottom-right {
   position: relative;
 }
 
-.spoon-crossing-left::after,
-.spoon-crossing-bottom::after,
-.spoon-crossing-top::after {
+.spoon-crossing-top-left::after,
+.spoon-crossing-top-right::after,
+.spoon-crossing-bottom-left::after,
+.spoon-crossing-bottom-right::after {
   content: url("../../images/spoons-crossing.svg");
   top: -30px;
   right: 31px;
   position: absolute;
-}
-
-.spoon-crossing-bottom::after {
-  top: auto;
-  right: 167px;
-  bottom: -95px;
-}
-
-.spoon-crossing-left::after {
-  right: auto;
-  left: 139px;
   z-index: 1000;
+}
+
+.spoon-crossing-top-left::after {
+  right: auto;
+  left: 31px;
+}
+
+.spoon-crossing-bottom-left::after {
+  top: auto;
+  right: auto;
+  bottom: -30px;
+  left: 31px;
+}
+
+.spoon-crossing-bottom-right::after {
+  top: auto;
+  bottom: -30px;
 }
 
 .section__background {
