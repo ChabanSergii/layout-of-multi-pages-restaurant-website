@@ -24,6 +24,7 @@ const fontsToCSS    = require('./gulp/fontsToCSS.js');
 const fontsToSASS   = require('./gulp/fontsToSASS.js');
 const processVideos = require('./gulp/video.js');
 const todo          = require('gulp-todo');
+const { generateFavicon, injectFaviconMarkup, checkForFaviconUpdate } = require('./gulp/favicon.js');
 
 
 // Creating TODO.md
@@ -35,7 +36,6 @@ function todoFinder() {
       }))
       .pipe(dest(path.app));         // Сохранение в корне проекта
 };
-
 
 
 /* Launching tasks based on changes */
@@ -72,14 +72,17 @@ function building() {
 /* If use CSS */
 /* const build = series(
     clear,
-    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, processVideos)
+    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, processVideos),
+    series(generateFavicon, injectFaviconMarkup, checkForFaviconUpdate),
     parallel(building),
 ); */
 
 const build = series(
     clear,
-    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos, todoFinder),
+    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos),
+    series(injectFaviconMarkup, checkForFaviconUpdate),
     parallel(building),
+    todoFinder,
 );
 
 const dev   = series(
@@ -91,9 +94,12 @@ const dev   = series(
 /* Tasks */
 exports.css           = css;
 exports.scss          = scss;
-exports.avifimg       = avifimg;
 exports.images        = images;
+exports.avifimg       = avifimg;
 exports.sprite        = sprite;
+exports.generateFavicon          = generateFavicon;
+exports.injectFaviconMarkup      = injectFaviconMarkup;
+exports.checkForFaviconUpdate    = checkForFaviconUpdate;
 exports.fonts         = fonts;
 exports.fontsToCSS    = fontsToCSS;
 exports.fontsToSASS   = fontsToSASS;
@@ -106,11 +112,9 @@ exports.clear         = clear;
 exports.processVideos = processVideos;
 exports.todoFinder    = todoFinder;
 
-
-
 /* Project assembly */
 /* gulp // gulp --production */
-/* npm start // npm run build */
+/* npm start // npm run build // npm run deploy*/
 exports.default  = app.isProd
     ? build
     : dev;
