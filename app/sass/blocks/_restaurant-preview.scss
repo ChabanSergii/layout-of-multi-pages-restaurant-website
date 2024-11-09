@@ -90,6 +90,7 @@ input[type="range"] {
   border-left: 29px solid var(--text-color);
   border-top: 19px solid transparent;
   border-bottom: 19px solid transparent;
+  border-radius: 3px;
 }
 
 .play-pause-center.pause::before {
@@ -98,6 +99,7 @@ input[type="range"] {
   width: 29px;
   height: 29px;
   background-color: var(--text-color);
+  border-radius: 3px;
 }
 
 .play-pause-center.pause {

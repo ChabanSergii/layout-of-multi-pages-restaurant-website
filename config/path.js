@@ -78,6 +78,7 @@ module.exports = {
       src: pathApp + '/images/favicon/g.svg',
       watch: pathApp + '/images/favicon/*.*',
       data: './config/faviconData.json',
+      file_name: 'g.svg',
       dest: pathDist,
     },
 }
