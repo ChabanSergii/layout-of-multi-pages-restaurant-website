@@ -1,0 +1,30 @@
+.happy-hours {
+  &__container {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__img {
+    background: var(--0C0C0C, #0C0C0C);
+  }
+
+  &__link {
+    display: block;
+    text-align: left;
+  }
+  &__content{
+    position: absolute;
+    z-index: 1000;
+    top: 330px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__slider{
+    cursor: pointer;
+  }
+}

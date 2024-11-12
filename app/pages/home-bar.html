@@ -12,16 +12,17 @@
 <body>
 
     <div class="wrapper">
-      <!--=include header.html -->
+      <!--= include header.html -->
         <main class="main">
-          <!--=include bar-hero.html -->
-          <!--=include reservation-form.html -->
+          <!--= include bar-hero.html -->
+          <!--= include reservation-form.html -->
           <!--= include bar-about.html -->
           <!--= include bar-range.html -->
-          <!--=include menu-special.html -->
+          <!--= include happy-hours.html -->
+          <!--= include menu-special.html -->
           <!--= include subscribe.html -->
         </main>
-      <!--=include footer.html -->
+      <!--= include footer.html -->
     </div>
 
     <script src="./../js/index.bundle.js"></script>
@@ -38,6 +39,19 @@
         autoplay: {
               delay: 4500,
               disableOnInteraction: false,
+        },
+      });
+    </script>
+    <!-- Swiper Menu -->
+    <script>
+      var swiper = new Swiper(".happy-hours__swiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        pauseOnMouseEnter: true,
+        loop: true,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
         },
       });
     </script>
