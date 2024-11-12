@@ -1,0 +1,31 @@
+.bar-about {
+  &__wrapper{
+    padding-top: 93px;
+    padding-bottom: 93px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 19px;
+  }
+  &__picture{
+    padding-top: 140px;
+    padding-right: 90px;
+  }
+  &__content{
+    padding-left: 60px;
+  }
+  &__content-img{
+    margin-bottom: 40px;
+  }
+  &__subheading{
+    margin-bottom: 22px;
+  }
+  &__title{
+    text-align: left;
+    margin-bottom: 32px;
+    letter-spacing: 1.92px;
+  }
+  &__description{
+    margin-bottom: 32px;
+    padding-right: 91px;
+  }
+}
