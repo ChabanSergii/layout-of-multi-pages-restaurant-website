@@ -38,6 +38,10 @@
 }
 .link-home{
   position: relative;
+  &:hover{
+    color: var(--title-color);
+    transition: color .2s linear;
+  }
   &::after {
     content: url('../../images/sprite.svg#icon-links-path');
     position: absolute;
