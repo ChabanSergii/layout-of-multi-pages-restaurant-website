@@ -1,0 +1,30 @@
+@use 'sass:color';
+
+.bar-range {
+  &__container {
+    padding-top: 149px;
+    padding-bottom: 152px;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+  }
+
+  &__wrapper {
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  &__card{
+    border: 1px solid var(--title-color);
+    &:hover{
+      filter: grayscale(50%);
+      transition: filter 0.3s linear;
+    }
+  }
+  &__img{
+    height: 100%;
+    max-width: 410px;
+  }
+}
