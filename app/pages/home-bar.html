@@ -6,21 +6,34 @@
     <meta name="description" content="Gericht home page of the bar">
     <title>Gericht</title>
     <link rel="stylesheet" href="./../css/normalize.css">
+    <link rel="stylesheet" href="./../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./../css/main.min.css">
 </head>
 <body>
 
     <div class="wrapper">
-        <!--=include header.html -->
+      <!--=include header.html -->
         <main class="main">
+          <!--=include bar-hero.html -->
           <!--=include reservation-form.html -->
           <!--=include menu-special.html -->
           <!--= include subscribe.html -->
         </main>
-    <!--=include footer.html -->
+      <!--=include footer.html -->
     </div>
 
     <script src="./../js/index.bundle.js"></script>
     <script src="./../js/custom_select.bundle.js"></script>
+    <script src="./../js/swiper-bundle.min.js"></script>
+    <!-- Swiper Hero -->
+    <script>
+      var swiper = new Swiper(".swiper__bar-hero", {
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+      });
+    </script>
 </body>
 </html>

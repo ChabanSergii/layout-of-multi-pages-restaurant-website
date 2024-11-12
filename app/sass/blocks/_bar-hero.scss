@@ -1,0 +1,50 @@
+.bar-hero {
+  height: 978px;
+  position: relative;
+  &__cont{
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &__container {
+    height: 100%;
+    position: relative;
+  }
+  &__content{
+    height: 100%;
+    position: absolute;
+    top: 319px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__title{
+    font-size: 181px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 9.05px;
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-wrap: nowrap;
+
+  }
+  &__picture {
+    height: 840px;
+    width: 634px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--title-color);
+  }
+  &__pagination{
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
+  &__links{
+    z-index: 100;
+  }
+}
+
+.swiper-slide,
+.swiper-wrapper {
+  height: 100%;
+}

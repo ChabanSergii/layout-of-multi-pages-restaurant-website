@@ -12,6 +12,7 @@
 @import "./elements/nav-icon";
 @import "./elements/burger-menu";
 @import "./elements/button";
+@import "./elements/scrollTop";
 
 // Blocks
 @import "./blocks/header";
@@ -31,5 +32,6 @@
 @import "./blocks/instagram";
 @import "./blocks/subscribe";
 
-// TODO добавлять фафиконку автоматом
+// Page Bar
+@import "./blocks/bar-hero";
 

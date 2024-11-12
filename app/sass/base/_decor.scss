@@ -69,10 +69,15 @@
   bottom: -30px;
 }
 
+.section__background-bar,
 .section__background {
   background-image: url("../../images/section-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.section__background-bar {
+  background-image: url("../../images/section-background-bar.jpg");
 }
 
 .not-transparent {
