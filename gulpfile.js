@@ -47,6 +47,7 @@ function watching() {
     });
     /* watch([path.css.watch], css).on('all', browserSync.reload) */
     watch([path.img.watch], images).on('all', browserSync.reload)
+    watch([path.svg.watch], sprite).on('all', browserSync.reload)
     watch([path.video.watch], processVideos).on('all', browserSync.reload)
     watch([path.fonts.watch], fonts).on('all', browserSync.reload)
     watch([path.js.watch], scripts).on('all', browserSync.reload)

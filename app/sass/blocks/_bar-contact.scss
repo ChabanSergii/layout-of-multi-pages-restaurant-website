@@ -1,7 +1,6 @@
 .bar-contact {
   z-index: 0;
   position: relative;
-  margin-bottom: 77px;
   &__container {
     padding-top: 128px;
     padding-bottom: 128px;
@@ -32,6 +31,7 @@
   &__schedule{
     margin-bottom: 16px;
     font-size: 23px;
+    font-weight: 400;
   }
   &__btn{
     margin-top: 64px;

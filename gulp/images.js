@@ -21,28 +21,6 @@ const notify            = require('gulp-notify');
 
 
 /* Images */
-/* function images() {
-    return src(path.img.src, {encoding: false})
-        .pipe(plumber({
-            errorHandler: notify.onError(error => ({
-                title: "Images",
-                message: error.message
-            }))
-        }))
-
-        .pipe(newer(path.img.dest))
-        .pipe(webp({
-            quality: 90,
-            method: 6
-        }))
-        .pipe(dest(path.img.dest))
-
-        .pipe(src(path.img.src, {encoding: false}))
-        .pipe(newer(path.img.dest))
-        .pipe(imagemin(app.imagemin))
-        .pipe(dest(path.img.dest))
-} */
-
 function images() {
   // Обработка форматов, отличных от .webp
   src(path.img.src, { encoding: false })

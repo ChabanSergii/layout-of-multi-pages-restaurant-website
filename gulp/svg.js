@@ -1,19 +1,14 @@
 /* Use only recommended task version for good work */
-const {src, dest}       = require('gulp');
-
+const {src, dest}  = require('gulp');
 
 /* Configs */
-const path              = require('../config/path.js');
-const app               = require('../config/app.js');
-
+const path         = require('../config/path.js');
 
 /* Plugins */
-const svgSprite         = require('gulp-svg-sprite');
-const clean             = require('gulp-clean');
+const svgSprite    = require('gulp-svg-sprite');
 
 
-/* SVG */
-function sprite(done) {
+/* function sprite(done) {
     return src(path.svg.srcsvg, { encoding: false })
         .pipe(svgSprite({
             mode: {
@@ -23,9 +18,34 @@ function sprite(done) {
                 }
             }
         }))
-        /* .pipe(dest(path.svg.srcmin)) */
-        /* .pipe(src(path.svg.srcmin, { read: false, encoding: false })) */
         .pipe(dest(path.svg.dest))
+        .pipe(src(path.svg.srcsvg, { encoding: false }))
+        .pipe(dest(path.svg.srcmin));
+} */
+
+/* SVG */
+function sprite(done) {
+  // Настройки для создания спрайта
+  const config = {
+    mode: {
+      stack: {
+        sprite: '../sprite.svg', // Путь для файла спрайта
+        example: true // Генерация HTML примера
+      }
+    }
+  };
+
+  // Генерация stack и сохранение в первую папку
+  src(path.svg.srcsvg, { encoding: false })
+    .pipe(svgSprite(config))
+    .pipe(dest(path.svg.srcmin)) // Папка для stack
+    .on('end', () => {
+      // Копирование спрайта в другую папку после создания
+      src('app/images/sprite.svg', { allowEmpty: true })
+        .pipe(dest(path.svg.dest)); // Папка для sprite
+    });
+
+  done();
 }
 
 

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Gericht home page of the restaurant">
-        <title>Gericht | Home-Restaurant</title>
+        <title>Gericht | Services</title>
         <link rel="stylesheet" href="./../css/normalize.css">
         <link rel="stylesheet" href="./../css/swiper-bundle.min.css">
         <link rel="stylesheet" href="./../css/main.min.css">
@@ -13,19 +13,11 @@
         <div class="wrapper">
             <!--= include header.html -->
             <main class="main">
-                <!--= include restaurant-hero.html -->
-                <!--= include restaurant-about.html -->
-                <!--= include reservation-form.html -->
-                <!--= include menu.html -->
-                <!--= include menu-special.html -->
-                <!--= include restaurant-chef.html -->
-                <!--= include restaurant-testimony.html -->
-                <!--= include restaurant-preview.html -->
-                <!--= include awards.html -->
-                <!--= include restaurant-blog.html -->
-                <!--= include instagram.html -->
-                <!--= include subscribe.html -->
-                <!--= include scrollTop.html -->
+              <!--= include home-item-hero.html -->
+              <!--= include menu.html -->
+              <!--= include reservation-form.html -->
+              <!--= include happy-hours.html -->
+              <!--= include subscribe.html -->
             </main>
             <!--= include footer.html -->
         </div>
@@ -36,21 +28,6 @@
         <script src="./../js/video_player.bundle.js"></script>
         <script src="./../js/view_more.bundle.js"></script>
         <script src="./../js/scrollTop.bundle.js"></script>
-
-        <!-- TODO перенести скрипты в отдельный файл -->
-        <!-- TODO перенастроить нормалайзы -->
-        <!-- FIXME: поправить кнопку play/pause/ улучшить семантику блока под несколько форматов, добавить атрибутов -->
-
-        <!-- Swiper Hero -->
-        <script>
-            var swiper = new Swiper(".swiper__restaurant-hero", {
-              loop: true,
-              pagination: {
-                  el: ".swiper-pagination",
-                  type: "fraction",
-              },
-            });
-        </script>
 
         <!-- Swiper Menu -->
         <script>
@@ -86,6 +63,20 @@
             slidesPerView: "auto",
             spaceBetween: 32,
             freeMode: true,
+          });
+        </script>
+
+        <!-- Swiper Happy Hours -->
+        <script>
+          var swiper = new Swiper(".home-item-hero__swiper", {
+            spaceBetween: 30,
+            effect: "fade",
+            pauseOnMouseEnter: true,
+            loop: true,
+            autoplay: {
+              delay: 4500,
+              disableOnInteraction: false,
+            },
           });
         </script>
     </body>
