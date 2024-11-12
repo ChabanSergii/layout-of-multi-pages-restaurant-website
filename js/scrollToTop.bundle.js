@@ -1,0 +1,1 @@
+window.onscroll=function(){const o=document.getElementById("scrollToTopBtn");document.body.scrollTop>200||document.documentElement.scrollTop>200?o.style.display="block":o.style.display="none"};
