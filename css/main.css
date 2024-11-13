@@ -102,14 +102,6 @@ body {
 @font-face {
   font-family: "CormorantUpright";
   font-display: swap;
-  src: url("../fonts/CormorantUpright-SemiBold.woff2") format("woff2"), url("../fonts/CormorantUpright-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "CormorantUpright";
-  font-display: swap;
   src: url("../fonts/CormorantUpright-Regular.woff2") format("woff2"), url("../fonts/CormorantUpright-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -120,6 +112,14 @@ body {
   font-display: swap;
   src: url("../fonts/OpenSans-Italic.woff2") format("woff2"), url("../fonts/OpenSans-Italic.woff") format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantUpright";
+  font-display: swap;
+  src: url("../fonts/CormorantUpright-SemiBold.woff2") format("woff2"), url("../fonts/CormorantUpright-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -417,6 +417,17 @@ main {
 
 .not-transparent {
   background: var(--page-bg);
+}
+
+.section-delimiter {
+  position: relative;
+}
+
+.section-delimiter::after {
+  content: url("../images/icon-delimiter.png");
+  position: absolute;
+  top: 35px;
+  right: -64px;
 }
 
 /* Nac Icon */
@@ -1928,6 +1939,69 @@ input[type=range] {
   background: none;
   color: var(--text-color);
   border: 1px solid var(--title-color);
+}
+
+.history__container {
+  padding-top: 152px;
+  padding-bottom: 152px;
+}
+
+.history__title {
+  margin-top: 25px;
+  margin-bottom: 64px;
+}
+
+.history__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.history__info {
+  padding-right: 111px;
+}
+
+.history__description {
+  margin-bottom: 40px;
+}
+
+.history__counter,
+.history__text {
+  font: 600 45px/130% var(--font-accent);
+  margin-top: 40px;
+  margin-bottom: 30px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: var(--title-color);
+}
+
+.history__counter {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.history__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  gap: 128px;
+}
+
+.history__option {
+  font: 400 32px/130% var(--font-accent);
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: var(--text-color);
+}
+
+.about-preview__container {
+  padding-bottom: 152px;
 }
 
 @supports (-webkit-appearance:none) {
