@@ -80,7 +80,7 @@ function building() {
 
 const build = series(
     clear,
-    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos),
+    parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos, generateFavicon),
     series(injectFaviconMarkup, checkForFaviconUpdate),
     parallel(building),
     todoFinder,

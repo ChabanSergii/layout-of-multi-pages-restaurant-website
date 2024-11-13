@@ -9,21 +9,6 @@ const svgSprite    = require('gulp-svg-sprite');
 const plumber      = require('gulp-plumber');
 
 
-/* function sprite(done) {
-    return src(path.svg.srcsvg, { encoding: false })
-        .pipe(svgSprite({
-            mode: {
-                stack: {
-                    sprite: '../sprite.svg',
-                    example: true
-                }
-            }
-        }))
-        .pipe(dest(path.svg.dest))
-        .pipe(src(path.svg.srcsvg, { encoding: false }))
-        .pipe(dest(path.svg.srcmin));
-} */
-
 /* SVG */
 function sprite() {
   const config = {

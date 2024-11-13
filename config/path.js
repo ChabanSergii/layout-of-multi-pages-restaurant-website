@@ -70,7 +70,7 @@ module.exports = {
         srcsvg: pathApp + '/images/svg/*.svg',
         srcmin: pathApp + '/images/',
         src: pathApp + '/images/*.svg',
-        watch: pathApp + '/images/*.svg',
+        watch: pathApp + '/images/svg/*.svg',
         dest: pathDist + '/images',
     },
 

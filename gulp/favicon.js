@@ -10,12 +10,11 @@ const FAVICON_DATA_FILE   = './config/faviconData.json';
 
 
 // Генерация фавиконок
-
 function generateFavicon(done) {
   realFavicon.generateFavicon({
     masterPicture: './app/images/favicon/g.svg',
-    dest: paths.favicon.dest,
-    iconsPath: '',
+    dest: './dist/images/favicon',
+    iconsPath: './images/favicon/',
     design: {
       ios: { pictureAspect: 'noChange' },
       desktopBrowser: {},
@@ -32,8 +31,8 @@ function generateFavicon(done) {
   }, done);
 }
 
-// Внедрение HTML кода фавиконок в HTML файлы
 
+// Внедрение HTML кода фавиконок в HTML файлы
 function injectFaviconMarkup(done) {
   // Проверяем наличие файла faviconData.json
   if (!fs.existsSync(FAVICON_DATA_FILE)) {
@@ -68,6 +67,7 @@ function checkForFaviconUpdate(done) {
   });
   done();
 }
+
 
 // Экспорт функций для использования в gulpfile.js
 module.exports = {
