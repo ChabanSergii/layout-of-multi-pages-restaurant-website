@@ -6,6 +6,7 @@ const path         = require('../config/path.js');
 
 /* Plugins */
 const svgSprite    = require('gulp-svg-sprite');
+const plumber      = require('gulp-plumber');
 
 
 /* function sprite(done) {
@@ -24,8 +25,7 @@ const svgSprite    = require('gulp-svg-sprite');
 } */
 
 /* SVG */
-function sprite(done) {
-  // Настройки для создания спрайта
+function sprite() {
   const config = {
     mode: {
       stack: {
@@ -36,7 +36,13 @@ function sprite(done) {
   };
 
   // Генерация stack и сохранение в первую папку
-  src(path.svg.srcsvg, { encoding: false })
+  return src(path.svg.srcsvg, { encoding: false })
+    .pipe(plumber({
+      errorHandler(err) {
+        console.error("Ошибка при создании SVG-спрайта:", err);
+        this.emit('end'); // Завершить поток
+      }
+    }))
     .pipe(svgSprite(config))
     .pipe(dest(path.svg.srcmin)) // Папка для stack
     .on('end', () => {
@@ -44,8 +50,6 @@ function sprite(done) {
       src('app/images/sprite.svg', { allowEmpty: true })
         .pipe(dest(path.svg.dest)); // Папка для sprite
     });
-
-  done();
 }
 
 

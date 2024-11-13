@@ -34,6 +34,8 @@
     }
   }
 }
+
+// TODO: Сделать стили, как с ложкой.
 .spoon-crossing-top-left,
 .spoon-crossing-top-right,
 .spoon-crossing-bottom-left,
@@ -82,4 +84,14 @@
 
 .not-transparent {
   background-color: var(--page-bg);
+}
+
+.section-delimiter {
+  position: relative;
+  &::after{
+    content: url('../../images/icon-delimiter.png');
+    position: absolute;
+    top: 35px;
+    right: -64px;
+  }
 }

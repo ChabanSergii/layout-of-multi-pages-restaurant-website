@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Gericht home page of the restaurant">
-        <title>Gericht | Services</title>
+        <title>Gericht | About Us</title>
         <link rel="stylesheet" href="./../css/normalize.css">
         <link rel="stylesheet" href="./../css/swiper-bundle.min.css">
         <link rel="stylesheet" href="./../css/main.min.css">
@@ -13,20 +13,27 @@
         <div class="wrapper">
             <!--= include header.html -->
             <main class="main">
-              <!--= include home-item-hero.html -->
-              <!--= include services-quality.html -->
-              <!--= include menu.html -->
-              <!--= include reservation-form.html -->
-              <!--= include happy-hours.html -->
-              <!--= include subscribe.html -->
+                <!--= include home-about-hero.html -->
+                <!--= include about-history.html -->
+                <!--= include restaurant-preview.html -->
+                <!--= include restaurant-chef.html -->
+
+                <!--= include restaurant-testimony.html -->
+                <!--= include instagram.html -->
+                <!--= include subscribe.html -->
+                <!--= include scrollTop.html -->
             </main>
             <!--= include footer.html -->
         </div>
 
         <script src="./../js/index.bundle.js"></script>
         <script src="./../js/swiper-bundle.min.js"></script>
-        <script src="./../js/custom_select.bundle.js"></script>
+        <script src="./../js/video_player.bundle.js"></script>
         <script src="./../js/scrollTop.bundle.js"></script>
+
+        <!-- TODO перенести скрипты в отдельный файл -->
+        <!-- TODO перенастроить нормалайзы -->
+        <!-- FIXME: поправить кнопку play/pause/ улучшить семантику блока под несколько форматов, добавить атрибутов -->
 
         <!-- Swiper Happy Hours -->
         <script>
@@ -42,13 +49,12 @@
           });
         </script>
 
-        <!-- Swiper Menu -->
+        <!-- Swiper Chef -->
         <script>
-          var swiper = new Swiper(".menu__swiper", {
+          var swiper = new Swiper(".swiper__restaurant-chef", {
             spaceBetween: 30,
-            effect: "fade",
-            pauseOnMouseEnter: true,
             loop: true,
+            pauseOnMouseEnter: true,
             autoplay: {
               delay: 4500,
               disableOnInteraction: false,
@@ -56,5 +62,13 @@
           });
         </script>
 
+        <!-- Swiper Instagram -->
+        <script>
+          var swiper = new Swiper(".instagram-swiper", {
+            slidesPerView: "auto",
+            spaceBetween: 32,
+            freeMode: true,
+          });
+        </script>
     </body>
 </html>
