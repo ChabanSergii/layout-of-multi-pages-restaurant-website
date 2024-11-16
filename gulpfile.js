@@ -25,16 +25,16 @@ const fontsToSASS   = require('./gulp/fontsToSASS.js');
 const processVideos = require('./gulp/video.js');
 const todo          = require('gulp-todo');
 const { generateFavicon, injectFaviconMarkup, checkForFaviconUpdate } = require('./gulp/favicon.js');
-
+const { buildLeafletCSS, buildLeafletJS }                             = require('./gulp/map.js');
 
 // Creating TODO.md
 function todoFinder() {
-  return src([path.js.todo, path.scss.todo, path.page.todo])
-      .pipe(todo({
-          fileName: 'TODO.md',       // Название файла со списком задач
-          verbose: true              // Показывать в консоли список найденных TODO
-      }))
-      .pipe(dest(path.app));         // Сохранение в корне проекта
+    return src([path.js.todo, path.scss.todo, path.page.todo])
+        .pipe(todo({
+            fileName: 'TODO.md',       // Название файла со списком задач
+            verbose: true              // Показывать в консоли список найденных TODO
+        }))
+        .pipe(dest(path.app));         // Сохранение в корне проекта
 };
 
 
@@ -82,6 +82,7 @@ const build = series(
     clear,
     parallel(page, scss, scripts, sprite, images, fonts, fontsToSASS, processVideos, generateFavicon),
     series(injectFaviconMarkup, checkForFaviconUpdate),
+    series(buildLeafletJS, buildLeafletCSS),
     parallel(building),
     todoFinder,
 );
@@ -93,14 +94,16 @@ const dev   = series(
 
 
 /* Tasks */
-exports.css           = css;
-exports.scss          = scss;
-exports.images        = images;
-exports.avifimg       = avifimg;
-exports.sprite        = sprite;
+exports.css                      = css;
+exports.scss                     = scss;
+exports.images                   = images;
+exports.avifimg                  = avifimg;
+exports.sprite                   = sprite;
 exports.generateFavicon          = generateFavicon;
 exports.injectFaviconMarkup      = injectFaviconMarkup;
 exports.checkForFaviconUpdate    = checkForFaviconUpdate;
+exports.buildLeafletJS           = buildLeafletJS;
+exports.buildLeafletCSS          = buildLeafletCSS;
 exports.fonts         = fonts;
 exports.fontsToCSS    = fontsToCSS;
 exports.fontsToSASS   = fontsToSASS;
