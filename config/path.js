@@ -55,8 +55,8 @@ module.exports = {
     },
 
     img: {
-        src: pathApp + '/images/src/*.{png,jpg,jpeg,gif,svg}',
-        watch: pathApp + '/images/**/*.{png,jpg,jpeg,gif,svg}',
+        src: pathApp + '/images/src/*.{png,jpg,jpeg,gif,svg,webp}',
+        watch: pathApp + '/images/**/*.{png,jpg,jpeg,gif,svg,webp}',
         dest: pathDist + '/images',
     },
 
