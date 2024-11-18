@@ -45,20 +45,34 @@
 
     // Добавление слоя карты OpenStreetMap
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+      maxZoom: 18,
     }).addTo(map);
     // Создание пользовательской иконки
     const customIcon = L.icon({
-            iconUrl: './../images/map-icon.png', // Замените на путь к вашему изображению
-            iconSize: [62, 62], // Размер иконки
-            iconAnchor: [0, 52], // Точка привязки (центр нижней части иконки)
-            popupAnchor: [0, -32], // Точка привязки для всплывающего окна
-        });
+      iconUrl: './../images/map-icon.png', // Замените на путь к вашему изображению
+      iconSize: [62, 62], // Размер иконки
+      iconAnchor: [31, 62], // Точка привязки (центр нижней части иконки)
+      popupAnchor: [0, -45], // Точка привязки для всплывающего окна
+    });
     // Добавление маркера на карту
     const marker = L.marker([40.76127879164621, -73.97678243742837], { icon: customIcon })
-        .addTo(map)
-        .bindPopup("<b>Gericht restaurant</b><br>9 W 53rd St, New York, NY 10019, USA")
-        .openPopup();
+      .addTo(map)
+    // Добавление подсказки (tooltip), которая отображается при наведении
+    marker.bindTooltip("<b>Gericht Restaurant</b><br>9 W 53rd St, New York, NY 10019, USA", {
+      permanent: false,    // Подсказка видна только при наведении
+      direction: "top",    // Расположение подсказки относительно маркера
+      className: "custom-tooltip", // Класс для кастомных стилей
+    });
+
+    // События: показываем и скрываем подсказку
+    marker.on('mouseover', function () {
+      this.openTooltip(); // Показываем подсказку
+    });
+
+    marker.on('mouseout', function () {
+      this.closeTooltip(); // Скрываем подсказку
+    });
   </script>
 </body>
 </html>

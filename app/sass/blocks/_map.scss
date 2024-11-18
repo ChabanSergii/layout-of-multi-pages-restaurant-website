@@ -16,3 +16,11 @@
 }
 }
 
+.custom-tooltip {
+  background: rgba(220, 202, 135, 0.9) !important; /* Золотой фон */
+  color: #000 !important;                         /* Чёрный текст */
+  border-radius: 5px !important;                  /* Скруглённые углы */
+  padding: 10px !important;                       /* Отступы */
+  font-size: 14px !important;                     /* Размер шрифта */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important; /* Тень для подсказки */
+}
