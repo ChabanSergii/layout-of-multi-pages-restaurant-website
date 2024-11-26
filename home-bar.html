@@ -1,8 +1,542 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Gericht home page of the bar"><title>Gericht | Home-Bar</title><link rel="stylesheet" href="./css/normalize.css"><link rel="stylesheet" href="./css/swiper-bundle.min.css"><link rel="stylesheet" href="./css/main.min.css"><link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg">
-<link rel="shortcut icon" href="./images/favicon/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
-<link rel="manifest" href="./images/favicon/site.webmanifest"></head><body><div class="wrapper"><header class="header"><div class="container header__container"><a href="" class="header__logo">Gerícht</a><nav class="header__nav mobile-nav"><ul class="header__list mobile-nav__list"><li class="header__item"><a href="./index.html" class="header__link">Home</a></li><li class="header__item"><a href="./services.html" class="header__link">Services</a></li><li class="header__item"><a href="./about-us.html" class="header__link">About Us</a></li><li class="header__item"><a href="#!" class="header__link">Pages</a></li><li class="header__item"><a href="#!" class="header__link">Contact Us</a></li><li class="header__item"><a href="#!" class="header__link">Blog</a></li><li class="header__item"><a href="#!" class="header__link">Landing</a></li><li class="header__item"><div class="header__btn-set"><button class="header__btn-login">Log in&nbsp;/ registration</button> <button class="header__btn-book">book table</button></div></li></ul></nav><button class="mobile-nav-btn" aria-label="burger menu button" role="button"><div class="nav-icon"></div></button><div class="header__btn-set"><button class="header__btn-login" aria-label="Log in">Log in&nbsp;/ registration</button> <span class="vertical-line"><svg xmlns="http://www.w3.org/2000/svg" width="2" height="57" viewBox="0 0 2 57" fill="none"><path d="M1 0C1 22.2599 1 34.7401 1 57" stroke="url(#paint0_radial_572_128)"></path><defs><radialGradient id="paint0_radial_572_128" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.5 28.5) rotate(90) scale(28.5 0.5)"><stop offset="0.588542" stop-color="white"></stop><stop offset="1" stop-color="white" stop-opacity="0"></stop></radialGradient></defs><!-- TODO Заменить делиметр --></svg> </span><button class="header__btn-book" aria-label="book table">book table</button></div></div><!-- TODO сделать скрол --><!-- TODO сдерать быстрое перемещение с подвала в шапку --></header><main class="main"><section class="bar-hero section__background-bar"><div class="container bar-hero__cont"><div class="swiper swiper__bar-hero"><div class="swiper-wrapper"><div class="swiper-slide bar-hero__container"><div class="bar-hero__content"><h1 class="title-main bar-hero__title">On&nbsp;the Rocks</h1></div><div class="bar-hero__picture"><picture><source srcset="./images/bar-hero-1.webp" type="image/webp"><img src="./images/bar-hero-1.jpg" alt="dish 1" class="bar-hero__img"></picture></div></div><div class="swiper-slide bar-hero__container"><div class="bar-hero__content"><h1 class="title-main bar-hero__title">On&nbsp;the Rocks</h1></div><div class="bar-hero__picture"><picture><source srcset="./images/bar-hero-2.webp" type="image/webp"><img src="./images/bar-hero-2.jpg" alt="dish 1" class="bar-hero__img"></picture></div></div><div class="swiper-slide bar-hero__container"><div class="bar-hero__content"><h1 class="title-main bar-hero__title">On&nbsp;the Rocks</h1></div><div class="bar-hero__picture"><picture><source srcset="./images/bar-hero-1.webp" type="image/webp"><img src="./images/bar-hero-1.jpg" alt="dish 1" class="bar-hero__img"></picture></div></div><div class="swiper-slide bar-hero__container"><div class="bar-hero__content"><h1 class="title-main bar-hero__title">On&nbsp;the Rocks</h1></div><div class="bar-hero__picture"><picture><source srcset="./images/bar-hero-2.webp" type="image/webp"><img src="./images/bar-hero-2.jpg" alt="dish 1" class="bar-hero__img"></picture></div></div></div><div class="swiper-pagination bar-hero__pagination"></div></div><div class="hero__links bar-hero__links"><a href="./home-bar.html" class="hero__link">#Bar</a> <a href="./index.html" class="hero__link">#Gericht</a></div></div></section><section class="reservations spoon-crossing-top-right"><div class="container reservations__container"><div class="reservations__inner not-transparent"><h5 class="subheading-center spoon reservations__subheading">Reservations</h5><h2 class="title reservations__title">Book A&nbsp;Table</h2><form action="#" id="book__table" method="post" class="reservations__form"><div class="reservations__input custom-select"><div class="select-trigger">1 Person</div><div class="custom-options"><span class="custom-option" data-value="1">1 Person</span> <span class="custom-option" data-value="2">2 Persons</span> <span class="custom-option" data-value="3">4 Persons</span></div></div><input type="text" name="book__date" id="date" class="reservations__input reservations__date" required="" autocomplete="off"> <input type="text" name="book__time" id="time" class="reservations__input reservations__time" required="" autocomplete="off"> <button type="submit" class="btn reservations__btn">Book Now</button></form></div></div><!-- FIXME исправить стили для персон и сделать выпадающее меню, как у airdate--></section><section class="bar-about section__background-bar spoon-crossing-top-left"><div class="container bar-about__container"><div class="bar-about__wrapper"><div class="bar-about__picture"><picture><source srcset="./images/bar-beer.webp" type="image/webp"><img src="./images/bar-beer.jpg" alt="bar"></picture></div><div class="bar-about__content"><picture><source srcset="./images/bar-drinks-1.webp" type="image/webp"><img src="./images/bar-drinks-1.jpg" alt="alcohol drink" class="bar-about__content-img"></picture><h5 class="subheading spoon-left bar-about__subheading">About Us</h5><h2 class="title bar-about__title">Food, Drinks, entertainment in&nbsp;one</h2><p class="text-description bar-about__description">Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse interdum mi&nbsp;aliquam In&nbsp;sed odio nec aliquet.</p><a href="#!" role="button" aria-label="view more" class="btn bar-about__btn">Know More</a></div></div></div></section><section class="bar-range"><div class="container bar-range__container"><h5 class="subheading-center spoon bar-range__subheading">Wide Range to&nbsp;choose from</h5><h2 class="title bar-range__title">What' s&nbsp;Your Poison?</h2><div class="bar-range__wrapper"><div class="bar-range__card"><a href="#!" class="bar-range__link"><picture><source srcset="./images/bar-drinks-3.webp" type="image/webp"><img src="./images/bar-drinks-3.jpg" alt="beer" class="bar-range__img" loading="lazy"></picture></a></div><div class="bar-range__card"><a href="#!" class="bar-range__link"><picture><source srcset="./images/bar-drinks-2.webp" type="image/webp"><img src="./images/bar-drinks-2.jpg" alt="beer" class="bar-range__img" loading="lazy"></picture></a></div><div class="bar-range__card"><a href="#!" class="bar-range__link"><picture><source srcset="./images/restaurant-insta-dish-5.webp" type="image/webp"><img src="./images/restaurant-insta-dish-5.jpg" alt="cocktail" class="bar-range__img" loading="lazy"></picture></a></div></div></div></section><section class="happy-hours spoon-crossing-bottom-right"><div class="container happy-hours__container"><div class="happy-hours__content"><h2 class="title-main happy-hours__title">Happy Hours</h2><p class="title-small happy-hours__time">Monday&nbsp;— Friday (<time datetime="4:00">4:00</time> Pm&nbsp;— <time datetime="7:00">7:00</time> Pm)</p></div><div class="swiper happy-hours__swiper"><div class="swiper-wrapper"><div class="swiper-slide happy-hours__slider"><h2 class="happy-hours__title"></h2><picture><source srcset="./images/bar-happy-hours-1.webp" type="image/webp"><img src="./images/bar-happy-hours-1.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture></div><div class="swiper-slide happy-hours__slider"><h2 class="happy-hours__title"></h2><picture><source srcset="./images/bar-happy-hours-2.webp" type="image/webp"><img src="./images/bar-happy-hours-2.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture></div><div class="swiper-slide happy-hours__slider"><h2 class="happy-hours__title"></h2><picture><source srcset="./images/bar-happy-hours-3.webp" type="image/webp"><img src="./images/bar-happy-hours-3.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture></div><div class="swiper-slide happy-hours__slider"><h2 class="happy-hours__title"></h2><picture><source srcset="./images/bar-happy-hours-4.webp" type="image/webp"><img src="./images/bar-happy-hours-4.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture></div></div></div></div></section><section class="menu-special"><div class="container menu-special__container"><div class="menu-special__inner"><h5 class="subheading-center spoon menu-special__subheading">Menu that fits you palette</h5><h2 class="title menu-special__title">Today' s&nbsp;Special</h2><div class="menu-special__content"><div class="menu-special__block"><h3 class="menu-special__title-drink">Wine &amp; Beer</h3><ul class="menu-special__list"><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Chapel Hill Shiraz</span> <span class="menu-special__line"></span> <span class="menu-special__price">$56</span></div><div class="menu-special__bottle">AU&nbsp;| Bottle</div></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Catena Malbec</span> <span class="menu-special__line"></span> <span class="menu-special__price">$59</span></div><div class="menu-special__bottle">AR&nbsp;| Bottle</div></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">La&nbsp;Vieille Rosé</span> <span class="menu-special__line"></span> <span class="menu-special__price">$44</span></div><div class="menu-special__bottle">FR&nbsp;| 750 ml</div></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Rhino Pale Ale</span> <span class="menu-special__line"></span> <span class="menu-special__price">$31</span></div><div class="menu-special__bottle">CA&nbsp;| 750 ml</div></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Irish Guinness</span> <span class="menu-special__line"></span> <span class="menu-special__price">$26</span></div><div class="menu-special__bottle">IE&nbsp;| 750 ml</div></li></ul></div><div class="menu-special__picture"><picture><source srcset="./images/restaurant-shaker.webp" type="image/webp"><img src="./images/restaurant-shaker.jpg" loading="lazy" alt="drink" class="menu-special__img"></picture></div><div class="menu-special__block"><h3 class="menu-special__title-drink">Cocktails</h3><ul class="menu-special__list"><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Aperol Spritz</span> <span class="menu-special__line"></span> <span class="menu-special__price">$20</span></div><p class="menu-special__ingredients">Aperol | Villa Marchesi prosecco | soda | 30ml</p></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Dark 'N' Stormy</span> <span class="menu-special__line"></span> <span class="menu-special__price">$16</span></div><p class="menu-special__ingredients">Dark rum | Ginger beer | Slice of&nbsp;lime</p></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Daiquiri</span> <span class="menu-special__line"></span> <span class="menu-special__price">$10</span></div><p class="menu-special__ingredients">Rum | Citrus juice | Sugar</p></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Old Fashioned</span> <span class="menu-special__line"></span> <span class="menu-special__price">$31</span></div><p class="menu-special__ingredients">Bourbon | Brown sugar | Angostura Bitters</p></li><li class="menu-special__item"><div class="menu-special__inner-top"><span class="menu-special__name">Negroni</span> <span class="menu-special__line"></span> <span class="menu-special__price">$26</span></div><p class="menu-special__ingredients">Gin | Sweet Vermouth | Campari | Orange garnish</p></li></ul></div><div class="menu-special__btn"><a href="#!" class="btn menu-special__link">View More</a></div></div></div></div></section><section class="bar-contact section__background spoon-crossing-bottom-right"><div class="container spoon-crossing-top-left bar-contact__container"><div class="bar-contact__content"><h5 class="subheading spoon-left bar-contact__subheading">Contact</h5><h2 class="title bar-contact__title">Find Us</h2><p class="text-description bar-contact__description">Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG</p><p class="name bar-contact__schedule">Opening Hours</p><div class="text-description bar-contact__time">Mon&nbsp;— Fri: <time datetime="10:00">10:00</time> am&nbsp;— <time datetime="02:00">02:00</time> am</div><div class="text-description bar-contact__time">Sat&nbsp;— Sun: <time datetime="10:00">10:00</time> am&nbsp;— <time datetime="03:00">03:00</time> am</div><a href="#!" role="button" aria-label="Know More" class="btn bar-contact__btn">Know More</a></div><div class="bar-contact__picture"><div class="block__gold-top"></div><picture><source srcset="./images/bar-drinks-4.webp" type="image/webp"><img src="./images/bar-drinks-4.jpg" loading="lazy" alt="Patrick Choi" class="bar-contact__img"></picture><div class="block__gold-bottom"></div></div></div></section><section class="subscribe"><div class="container subscribe__container"><div class="subscribe__wrapper not-transparent"><h5 class="subheading-center spoon subscribe__subheading">Newsletter</h5><h2 class="title subscribe__title">Subscribe to&nbsp;Our Newsletter</h2><p class="text-description subscribe__description">And never miss latest Updates!</p><form action="!action" class="subscribe__form"><input type="email" class="subscribe__input" autocomplete="off" required="" placeholder="Email Address" maxlength="30" minlength="4"> <button class="btn subscribe__btn" type="submit" aria-label="subscribe button">Subscribe</button></form></div></div></section></main><footer class="footer section__background"><div class="container footer__container"><div class="footer__inner"><div class="footer__block"><h3 class="footer__title title-small">Contact Us</h3><address class="footer__address"><ul class="footer__list"><li class="footer__item text-description">9 W&nbsp;53rd St, New York, NY&nbsp;10019, USA</li><li class="footer__item text-description"><a href="tel:+1 212-344-1230">+1 212-344-1230</a></li><li class="footer__item text-description"><a href="tel:+1 212-555-1230">+1 212-555-1230</a></li></ul></address></div><div class="footer__block footer__block-logo"><h2 class="footer__logo title">Gerícht</h2><p class="footer__text text-description spoon">«The best way to&nbsp;find yourself is&nbsp;to&nbsp;lose yourself in&nbsp;the service of&nbsp;others.»</p><ul class="social__list"><li class="social__item"><a href="#!"><img src="./images/sprite.svg#icon-facebook" class="svg-icon-facebook-dims" alt="icon-facebook"></a></li><li class="social__item"><a href="#!"><img src="./images/sprite.svg#icon-twitter" class="svg-icon-twitter-dims" alt="icon-twitter"></a></li><li class="social__item"><a href="#!"><img src="./images/sprite.svg#icon-insta" class="svg-icon-insta-dims footer__svg" alt="icon-insta"></a></li></ul></div><div class="footer__block"><h3 class="footer__title title-small">Working Hours</h3><address class="footer__address"><ul class="footer__list"><li class="footer__item text-description"><div class="footer__day">Monday-Friday:</div><div class="footer__time" tabindex="0"><time datetime="08:00">08:00</time> am&nbsp;— <time datetime="12:00">12:00</time> am</div></li><li class="footer__item text-description"><div class="footer__day">Saturday-Sunday:</div><div class="footer__time" tabindex="0"><time datetime="07:00">07:00</time> am&nbsp;— <time datetime="11:00">11:00</time> pm</div></li></ul></address></div></div><div class="copyright text-description">2024 Gerícht. All Rights reserved.</div></div><!-- FIXME: сделать ховер на соцсети --></footer></div><script src="./js/index.bundle.js"></script><script src="./js/custom_select.bundle.js"></script><script src="./js/swiper-bundle.min.js"></script><!-- Swiper Hero --><script>var swiper = new Swiper(".swiper__bar-hero", {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Gericht bar-home page of the bar">
+    <title>Gericht | Home-Bar</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+
+    <div class="wrapper">
+      <header class="header">
+          <div class="container header__container">
+              <a href="" class="header__logo">Gerícht</a>
+              <nav class="header__nav mobile-nav">
+                  <ul class="header__list mobile-nav__list">
+                      <li class="header__item">
+                          <a href="./index.html" class="header__link">
+                              Home
+                          </a>
+                      </li>
+                      <li class="header__item">
+                          <a href="./services.html" class="header__link">
+                            Services
+                          </a>
+                      </li>
+                      <li class="header__item">
+                          <a href="./about-us.html" class="header__link">
+                            About Us
+                          </a>
+                      </li>
+                      <li class="header__item">
+                        <a href="#!" class="header__link">
+                          Pages
+                        </a>
+                      </li>
+                      <li class="header__item">
+                        <a href="./our-chiefs.html" class="header__link">
+                          Our Chiefs
+                        </a>
+                      </li>
+                      <li class="header__item">
+                          <a href="./contact-us.html" class="header__link">
+                              Contact Us
+                          </a>
+                      </li>
+                      <li class="header__item">
+                          <a href="#!" class="header__link">
+                              Blog
+                          </a>
+                      </li>
+                      <li class="header__item">
+                          <a href="#!" class="header__link">
+                              Landing
+                          </a>
+                      </li>
+                      <li class="header__item">
+                          <div class="header__btn-set">
+                              <button class="header__btn-login">Log in&#160;/ registration</button>
+                              <button class="header__btn-book">book table</button>
+                          </div>
+                      </li>
+                  </ul>
+              </nav>
+              <button class="mobile-nav-btn" aria-label="burger menu button" role="button">
+                  <div class="nav-icon"></div>
+              </button>
+              <div class="header__btn-set">
+                  <button class="header__btn-login" aria-label="Log in">Log in&#160;/ registration</button>
+                  <span class="vertical-line">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="2" height="57" viewBox="0 0 2 57" fill="none">
+                          <path d="M1 0C1 22.2599 1 34.7401 1 57" stroke="url(#paint0_radial_572_128)"/>
+                          <defs>
+                          <radialGradient id="paint0_radial_572_128" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.5 28.5) rotate(90) scale(28.5 0.5)">
+                              <stop offset="0.588542" stop-color="white"/>
+                              <stop offset="1" stop-color="white" stop-opacity="0"/>
+                          </radialGradient>
+                          </defs>
+                          <!-- TODO Заменить делиметр -->
+                      </svg>
+                  </span>
+                  <button class="header__btn-book" aria-label="book table">book table</button>
+              </div>
+          </div>
+          <!-- TODO сделать скрол -->
+          <!-- TODO сдерать быстрое перемещение с подвала в шапку -->
+
+      </header>
+
+        <main class="main">
+          <section class="bar-hero section__background-bar">
+              <div class="container bar-hero__cont">
+                  <div class="swiper swiper__bar-hero">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide bar-hero__container">
+                            <div class="bar-hero__content">
+                                <h1 class="title-main bar-hero__title">
+                                  On&#160;the Rocks
+                                </h1>
+                            </div>
+                            <div class="bar-hero__picture">
+                                <picture><source srcset="./images/bar-hero-1.webp" type="image/webp"><img src="./images/bar-hero-1.jpg" alt="dish 1" class="bar-hero__img"></picture>
+                            </div>
+                          </div>
+
+                          <div class="swiper-slide bar-hero__container">
+                            <div class="bar-hero__content">
+                                <h1 class="title-main bar-hero__title">
+                                  On&#160;the Rocks
+                                </h1>
+                            </div>
+                            <div class="bar-hero__picture">
+                                <picture><source srcset="./images/bar-hero-2.webp" type="image/webp"><img src="./images/bar-hero-2.jpg" alt="dish 1" class="bar-hero__img"></picture>
+                            </div>
+                          </div>
+
+                          <div class="swiper-slide bar-hero__container">
+                            <div class="bar-hero__content">
+                                <h1 class="title-main bar-hero__title">
+                                  On&#160;the Rocks
+                                </h1>
+                            </div>
+                            <div class="bar-hero__picture">
+                                <picture><source srcset="./images/bar-hero-1.webp" type="image/webp"><img src="./images/bar-hero-1.jpg" alt="dish 1" class="bar-hero__img"></picture>
+                            </div>
+                          </div>
+
+                          <div class="swiper-slide bar-hero__container">
+                            <div class="bar-hero__content">
+                                <h1 class="title-main bar-hero__title">
+                                  On&#160;the Rocks
+                                </h1>
+                            </div>
+                            <div class="bar-hero__picture">
+                                <picture><source srcset="./images/bar-hero-2.webp" type="image/webp"><img src="./images/bar-hero-2.jpg" alt="dish 1" class="bar-hero__img"></picture>
+                            </div>
+                          </div>
+
+                      </div>
+                      <div class="swiper-pagination bar-hero__pagination"></div>
+                  </div>
+
+                  <div class="hero__links bar-hero__links">
+                      <a href="./home-bar.html" class="hero__link">#Bar</a>
+                      <a href="./index.html" class="hero__link">#Gericht</a>
+                  </div>
+              </div>
+          </section>
+
+          <section class="reservations spoon-crossing-top-right">
+            <div class="container reservations__container">
+              <div class="reservations__inner not-transparent">
+                <h5 class="subheading-center spoon reservations__subheading">
+                  Reservations
+                </h5>
+                <h2 class="title reservations__title">Book A&#160;Table</h2>
+
+                <form action="#" id="book__table" method="post" class="reservations__form">
+                  <!-- Total person -->
+                  <div class="reservations__input custom-select" aria-labelledby="select-label">
+                    <span id="select-label" class="sr-only">Number of&#160;persons</span>
+                    <div class="select-trigger" tabindex="0" role="button" aria-expanded="false" aria-controls="custom-options">1 Person</div>
+                    <div class="custom-options" id="custom-options" role="listbox" aria-hidden="true">
+                        <span class="custom-option" data-value="1" role="option" tabindex="0">1 Person</span>
+                        <span class="custom-option" data-value="2" role="option" tabindex="0">2 Persons</span>
+                        <span class="custom-option" data-value="3" role="option" tabindex="0">4 Persons</span>
+                    </div>
+                  </div>
+
+                  <!-- Date -->
+                  <label for="date" class="sr-only">Date</label>
+                  <input type="text" name="book__date" id="date" class="reservations__input reservations__date" required autocomplete="off" aria-label="Select Date">
+
+                  <!-- Time -->
+                  <label for="time" class="sr-only">Time</label>
+                  <input type="text" name="book__time" id="time" class="reservations__input reservations__time" required autocomplete="off" aria-label="Select Time">
+
+                  <button type="submit" class="btn reservations__btn" aria-label="Submit your reservation">Book Now</button>
+                </form>
+
+              </div>
+            </div>
+            <!-- FIXME исправить стили для персон и сделать выпадающее меню, как у airdate-->
+          </section>
+
+          <section class="bar-about section__background-bar spoon-crossing-top-left">
+            <div class="container bar-about__container">
+              <div class="bar-about__wrapper">
+                <div class="bar-about__picture">
+                  <picture><source srcset="./images/bar-beer.webp" type="image/webp"><img src="./images/bar-beer.jpg" alt="bar"></picture>
+                </div>
+                <div class="bar-about__content">
+                  <picture><source srcset="./images/bar-drinks-1.webp" type="image/webp"><img src="./images/bar-drinks-1.jpg" alt="alcohol drink" class="bar-about__content-img"></picture>
+                  <h5 class="subheading spoon-left bar-about__subheading">About Us</h5>
+                  <h2 class="title bar-about__title">
+                    Food, Drinks, entertainment in&#160;one
+                  </h2>
+                  <p class="text-description bar-about__description">
+                    Adipiscing tempus ullamcorper lobortis odio tellus arcu volutpat. Risus placerat morbi volutpat habitasse interdum mi&#160;aliquam In&#160;sed odio nec aliquet.</p>
+                  <a href="#!" role="button" aria-label="view more" class="btn bar-about__btn">Know More</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bar-range">
+            <div class="container bar-range__container">
+              <h5 class="subheading-center spoon bar-range__subheading">
+                Wide Range to&#160;choose from
+              </h5>
+              <h2 class="title bar-range__title">What&apos; s&#160;Your Poison?</h2>
+              <div class="bar-range__wrapper">
+
+                <div class="bar-range__card">
+                    <a href="#!" class="bar-range__link">
+                      <picture><source srcset="./images/bar-drinks-3.webp" type="image/webp"><img src="./images/bar-drinks-3.jpg" alt="beer" class="bar-range__img" loading="lazy"></picture>
+                    </a>
+                </div>
+
+                <div class="bar-range__card">
+                  <a href="#!" class="bar-range__link">
+                    <picture><source srcset="./images/bar-drinks-2.webp" type="image/webp"><img src="./images/bar-drinks-2.jpg" alt="beer" class="bar-range__img" loading="lazy"></picture>
+                  </a>
+                </div>
+
+                <div class="bar-range__card">
+                  <a href="#!" class="bar-range__link">
+                    <picture><source srcset="./images/restaurant-insta-dish-5.webp" type="image/webp"><img src="./images/restaurant-insta-dish-5.jpg" alt="cocktail" class="bar-range__img" loading="lazy"></picture>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <section class="happy-hours spoon-crossing-bottom-right">
+            <div class="container happy-hours__container">
+              <div class="happy-hours__content">
+                <h2 class="title-main happy-hours__title">Happy Hours</h2>
+                <p class="title-small happy-hours__time">
+                  Monday&#160;&#8212; Friday (
+                  <time datetime="4:00">4:00</time>
+                  Pm&#160;&#8212;
+                  <time datetime="7:00">7:00</time>
+                  Pm)
+                </p>
+              </div>
+              <div class="swiper happy-hours__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide happy-hours__slider">
+                    <h2 class="happy-hours__title"></h2>
+                    <picture><source srcset="./images/bar-happy-hours-1.webp" type="image/webp"><img src="./images/bar-happy-hours-1.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture>
+                  </div>
+
+                  <div class="swiper-slide happy-hours__slider">
+                    <h2 class="happy-hours__title"></h2>
+                    <picture><source srcset="./images/bar-happy-hours-2.webp" type="image/webp"><img src="./images/bar-happy-hours-2.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture>
+                  </div>
+
+                  <div class="swiper-slide happy-hours__slider">
+                    <h2 class="happy-hours__title"></h2>
+                    <picture><source srcset="./images/bar-happy-hours-3.webp" type="image/webp"><img src="./images/bar-happy-hours-3.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture>
+                  </div>
+
+                  <div class="swiper-slide happy-hours__slider">
+                    <h2 class="happy-hours__title"></h2>
+                    <picture><source srcset="./images/bar-happy-hours-4.webp" type="image/webp"><img src="./images/bar-happy-hours-4.jpg" loading="lazy" alt="bar happy-hours" class="happy-hours__img"></picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="menu-special">
+            <div class="container menu-special__container">
+              <div class="menu-special__inner">
+                <h5 class="subheading-center spoon menu-special__subheading">
+                  Menu that fits you palette
+                </h5>
+                <h2 class="title menu-special__title">Today&apos; s&#160;Special</h2>
+                <div class="menu-special__content">
+                  <div class="menu-special__block">
+                    <h3 class="menu-special__title-drink">Wine &amp; Beer</h3>
+
+                    <ul class="menu-special__list">
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Chapel Hill Shiraz</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$56</span>
+                        </div>
+                        <div class="menu-special__bottle">
+                          AU&#160;| Bottle
+                        </div>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Catena Malbec</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$59</span>
+                        </div>
+                        <div class="menu-special__bottle">
+                          AR&#160;| Bottle
+                        </div>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">La&#160;Vieille Ros&#233;</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$44</span>
+                        </div>
+                        <div class="menu-special__bottle">
+                          FR&#160;| 750 ml
+                        </div>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Rhino Pale Ale</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$31</span>
+                        </div>
+                        <div class="menu-special__bottle">
+                          CA&#160;| 750 ml
+                        </div>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Irish Guinness</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$26</span>
+                        </div>
+                        <div class="menu-special__bottle">
+                          IE&#160;| 750 ml
+                        </div>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                  <div class="menu-special__picture">
+                    <picture><source srcset="./images/restaurant-shaker.webp" type="image/webp"><img src="./images/restaurant-shaker.jpg" loading="lazy" alt="drink" class="menu-special__img"></picture>
+                  </div>
+
+                  <div class="menu-special__block">
+                    <h3 class="menu-special__title-drink">Cocktails</h3>
+
+                    <ul class="menu-special__list">
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Aperol Spritz</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$20</span>
+                        </div>
+                        <p class="menu-special__ingredients">
+                          Aperol | Villa Marchesi prosecco | soda | 30ml
+                        </p>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Dark 'N' Stormy</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$16</span>
+                        </div>
+                        <p class="menu-special__ingredients">
+                          Dark rum | Ginger beer | Slice of&#160;lime
+                        </p>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Daiquiri</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$10</span>
+                        </div>
+                        <p class="menu-special__ingredients">
+                          Rum | Citrus juice | Sugar
+                        </p>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Old Fashioned</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$31</span>
+                        </div>
+                        <p class="menu-special__ingredients">
+                          Bourbon | Brown sugar | Angostura Bitters
+                        </p>
+                      </li>
+
+                      <li class="menu-special__item">
+                        <div class="menu-special__inner-top">
+                          <span class="menu-special__name">Negroni</span>
+                          <span class="menu-special__line"></span>
+                          <span class="menu-special__price">$26</span>
+                        </div>
+                        <p class="menu-special__ingredients">
+                          Gin | Sweet Vermouth | Campari | Orange garnish
+                        </p>
+                      </li>
+
+                    </ul>
+                  </div>
+                  <div class="menu-special__btn">
+                    <a href="#!" class="btn menu-special__link">View More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="bar-contact section__background spoon-crossing-bottom-right">
+              <div class="container spoon-crossing-top-left bar-contact__container">
+                  <div class="bar-contact__content">
+                      <h5 class="subheading spoon-left bar-contact__subheading">Contact</h5>
+                      <h2 class="title bar-contact__title">
+                        Find Us
+                      </h2>
+                      <p class="text-description bar-contact__description">
+                        Lane Ends Bungalow, Whatcroft Hall Lane, Rudheath, CW9 7SG</p>
+                      <p class="name bar-contact__schedule">Opening Hours</p>
+                      <div class="text-description bar-contact__time">Mon&#160;&#8212; Fri: <time datetime="10:00">10:00</time> am&#160;&#8212; <time datetime="02:00">02:00</time> am</div>
+                      <div class="text-description bar-contact__time">Sat&#160;&#8212; Sun: <time datetime="10:00">10:00</time> am&#160;&#8212; <time datetime="03:00">03:00</time> am</div>
+                      <a href="#!" role="button" aria-label="Know More" class="btn bar-contact__btn">Know More</a>
+                  </div>
+                  <div class="bar-contact__picture">
+                      <div class="block__gold-top"></div>
+                      <picture><source srcset="./images/bar-drinks-4.webp" type="image/webp"><img src="./images/bar-drinks-4.jpg" loading="lazy" alt="Patrick Choi" class="bar-contact__img"></picture>
+                      <div class="block__gold-bottom"></div>
+                  </div>
+              </div>
+          </section>
+
+          <section class="subscribe">
+            <div class="container subscribe__container">
+              <div class="subscribe__wrapper not-transparent">
+                <h5 class="subheading-center spoon subscribe__subheading">
+                  Newsletter
+                </h5>
+                <h2 class="title subscribe__title">Subscribe to&#160;Our Newsletter</h2>
+                <p class="text-description subscribe__description">
+                  And never miss latest Updates!
+                </p>
+                <form action="!action" class="subscribe__form">
+                  <label for="email" class="sr-only">Email Address</label>
+                  <input type="email" name="email" class="subscribe__input" autocomplete="off" required placeholder="Email Address" maxlength="35" minlength="12">
+                  <button class="btn subscribe__btn" type="submit" aria-label="subscribe button">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      <footer class="footer section__background">
+          <div class="container footer__container">
+              <div class="footer__inner">
+                  <div class="footer__block">
+                      <h3 class="footer__title title-small">Contact Us</h3>
+                      <address class="footer__address">
+                          <ul class="footer__list">
+                              <li class="footer__item text-description">9 W&#160;53rd St, New York, NY&#160;10019, USA</li>
+                              <li class="footer__item text-description">
+                                  <a href="tel:+1 212-344-1230">+1 212-344-1230</a>
+                              </li>
+                              <li class="footer__item text-description">
+                                  <a href="tel:+1 212-555-1230">+1 212-555-1230</a>
+                              </li>
+                          </ul>
+                      </address>
+                  </div>
+                  <div class="footer__block footer__block-logo">
+                      <h2 class="footer__logo title">Gerícht</h2>
+                      <p class="footer__text text-description spoon">
+                          &#171;The best way to&#160;find yourself is&#160;to&#160;lose yourself in&#160;the service of&#160;others.&#187;
+                      </p>
+                      <ul class="social__list">
+                          <li class="social__item">
+                              <a href="#!">
+                                  <img src="./images/sprite.svg#icon-facebook" class="svg-icon-facebook-dims" alt="icon-facebook">
+                              </a>
+                          </li>
+                          <li class="social__item">
+                              <a href="#!">
+                                  <img src="./images/sprite.svg#icon-twitter" class="svg-icon-twitter-dims" alt="icon-twitter">
+                              </a>
+                          </li>
+                          <li class="social__item">
+                              <a href="#!">
+                                  <img src="./images/sprite.svg#icon-insta" class="svg-icon-insta-dims footer__svg" alt="icon-insta">
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="footer__block">
+                      <h3 class="footer__title title-small">Working Hours</h3>
+                      <address class="footer__address">
+                          <ul class="footer__list">
+                              <li class="footer__item text-description">
+                                  <div class="footer__day">Monday-Friday:</div>
+                                  <div class="footer__time" tabindex="0">
+                                      <time datetime="08:00">08:00</time>
+                                      am&#160;&#8212;
+                                      <time datetime="12:00">12:00</time>
+                                      am</div>
+                              </li>
+                              <li class="footer__item text-description">
+                                  <div class="footer__day">Saturday-Sunday:</div>
+                                  <div class="footer__time" tabindex="0">
+                                      <time datetime="07:00">07:00</time>
+                                      am&#160;&#8212;
+                                      <time datetime="11:00">11:00</time>
+                                      pm
+                                  </div>
+                              </li>
+                          </ul>
+                      </address>
+                  </div>
+              </div>
+              <div class="copyright text-description">2024 Gerícht. All Rights reserved.</div>
+          </div>
+          <!-- FIXME: сделать ховер на соцсети -->
+      </footer>
+
+    </div>
+
+    <script src="./js/index.bundle.js"></script>
+    <script src="./js/custom_select.bundle.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <!-- Swiper Hero -->
+    <script>
+      var swiper = new Swiper(".swiper__bar-hero", {
         loop: true,
         pagination: {
             el: ".swiper-pagination",
@@ -12,7 +546,12 @@
               delay: 4500,
               disableOnInteraction: false,
         },
-      });</script><!-- Swiper Happy Hours --><script>var swiper = new Swiper(".happy-hours__swiper", {
+      });
+    </script>
+
+    <!-- Swiper Happy Hours -->
+    <script>
+      var swiper = new Swiper(".happy-hours__swiper", {
         spaceBetween: 30,
         effect: "fade",
         pauseOnMouseEnter: true,
@@ -21,4 +560,7 @@
           delay: 4500,
           disableOnInteraction: false,
         },
-      });</script></body></html>
+      });
+    </script>
+</body>
+</html>
