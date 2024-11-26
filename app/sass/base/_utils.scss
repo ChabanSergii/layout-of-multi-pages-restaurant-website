@@ -3,20 +3,27 @@
     display: none !important;
 }
 
-// For screen reader
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
 .no-scroll {
     overflow-y: hidden;
+}
+
+// Стили для автозаполненных полей
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset; // белый фон
+    -webkit-text-fill-color: var(--text-color-pagination); // текст черного цвета
+    transition: background-color 5000s ease-in-out 0s; // замедляем анимацию изменения цвета
+}
+
+// Стили для скрытия
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

@@ -5,19 +5,30 @@
         Reservations
       </h5>
       <h2 class="title reservations__title">Book A Table</h2>
+
       <form action="#" id="book__table" method="post" class="reservations__form">
-        <div class="reservations__input custom-select">
-            <div class="select-trigger">1 Person</div>
-            <div class="custom-options">
-                <span class="custom-option" data-value="1">1 Person</span>
-                <span class="custom-option" data-value="2">2 Persons</span>
-                <span class="custom-option" data-value="3">4 Persons</span>
-            </div>
+        <!-- Total person -->
+        <div class="reservations__input custom-select" aria-labelledby="select-label">
+          <span id="select-label" class="sr-only">Number of persons</span>
+          <div class="select-trigger" tabindex="0" role="button" aria-expanded="false" aria-controls="custom-options">1 Person</div>
+          <div class="custom-options" id="custom-options" role="listbox" aria-hidden="true">
+              <span class="custom-option" data-value="1" role="option" tabindex="0">1 Person</span>
+              <span class="custom-option" data-value="2" role="option" tabindex="0">2 Persons</span>
+              <span class="custom-option" data-value="3" role="option" tabindex="0">4 Persons</span>
+          </div>
         </div>
-        <input type="text" name="book__date" id="date" class="reservations__input reservations__date" required autocomplete="off">
-        <input type="text" name="book__time" id="time" class="reservations__input reservations__time" required autocomplete="off">
-        <button type="submit" class="btn reservations__btn">Book Now</button>
+
+        <!-- Date -->
+        <label for="date" class="sr-only">Date</label>
+        <input type="text" name="book__date" id="date" class="reservations__input reservations__date" required autocomplete="off" aria-label="Select Date">
+
+        <!-- Time -->
+        <label for="time" class="sr-only">Time</label>
+        <input type="text" name="book__time" id="time" class="reservations__input reservations__time" required autocomplete="off" aria-label="Select Time">
+
+        <button type="submit" class="btn reservations__btn" aria-label="Submit your reservation">Book Now</button>
       </form>
+
     </div>
   </div>
   <!-- FIXME исправить стили для персон и сделать выпадающее меню, как у airdate-->

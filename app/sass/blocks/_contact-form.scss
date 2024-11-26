@@ -1,0 +1,43 @@
+.contact-form {
+  &__container {
+    padding-top: 128px;
+    padding-bottom: 128px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__content {
+    padding-top: 118px;
+    padding-right: 85px;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__text,
+  &__item{
+    height: 60px;
+    padding: 16px 19px;
+    background: transparent;
+    color: rgb(245,239,219);
+    border: 1px solid rgba(220, 202, 135, 0.20);
+  }
+  &__text{
+    height: 140px;
+    resize: none;
+    scrollbar-width: none;
+  }
+  &__picture {
+    margin-left: 95px;
+    position: relative;
+
+
+    &::after {
+      content: url('../../images/section-g-white.svg');
+      left: -71px;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+}
+
