@@ -6,7 +6,7 @@
       </h5>
       <h2 class="title reservations__title">Book A Table</h2>
 
-      <form action="#" id="book__table" method="post" class="reservations__form">
+      <form action="https://httpbin.org/post" id="book__table" method="post" class="reservations__form" autocomplete="off">
         <!-- Total person -->
         <div class="reservations__input custom-select" aria-labelledby="select-label">
           <span id="select-label" class="sr-only">Number of persons</span>
@@ -14,17 +14,19 @@
           <div class="custom-options" id="custom-options" role="listbox" aria-hidden="true">
               <span class="custom-option" data-value="1" role="option" tabindex="0">1 Person</span>
               <span class="custom-option" data-value="2" role="option" tabindex="0">2 Persons</span>
-              <span class="custom-option" data-value="3" role="option" tabindex="0">4 Persons</span>
+              <span class="custom-option" data-value="4" role="option" tabindex="0">4 Persons</span>
           </div>
         </div>
+        <!-- Hidden field for sending -->
+        <input type="hidden" name="total_persons" id="total-persons" value="1">
 
         <!-- Date -->
         <label for="date" class="sr-only">Date</label>
-        <input type="text" name="book__date" id="date" class="reservations__input reservations__date" required autocomplete="off" aria-label="Select Date">
+        <input type="text" name="book__date" id="date" class="reservations__input reservations__date" required aria-label="Select Date">
 
         <!-- Time -->
         <label for="time" class="sr-only">Time</label>
-        <input type="text" name="book__time" id="time" class="reservations__input reservations__time" required autocomplete="off" aria-label="Select Time">
+        <input type="text" name="book__time" id="time" class="reservations__input reservations__time" required aria-label="Select Time">
 
         <button type="submit" class="btn reservations__btn" aria-label="Submit your reservation">Book Now</button>
       </form>

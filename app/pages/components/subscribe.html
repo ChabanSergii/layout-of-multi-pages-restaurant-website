@@ -8,9 +8,12 @@
       <p class="text-description subscribe__description">
         And never miss latest Updates!
       </p>
-      <form action="!action" class="subscribe__form" >
-        <label for="email" class="sr-only">Email Address</label>
-        <input type="email" name="email" class="subscribe__input" autocomplete="off" required placeholder="Email Address" maxlength="35" minlength="12">
+      <form action="https://httpbin.org/post" class="subscribe__form" id="subscribe-us-form" autocomplete="off" method="post" novalidate>
+        <div class="form-group">
+          <label for="email" class="sr-only">Email Address</label>
+          <input type="email" name="email" class="subscribe__input" autocomplete="off" required placeholder="Email Address" maxlength="35" minlength="12">
+          <span class="error-message" aria-live="polite"></span>
+        </div>
         <button class="btn subscribe__btn" type="submit" aria-label="subscribe button">Subscribe</button>
       </form>
     </div>

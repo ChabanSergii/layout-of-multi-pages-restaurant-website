@@ -10,9 +10,12 @@
 // Стили для автозаполненных полей
 input:-webkit-autofill,
 textarea:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset; // белый фон
-    -webkit-text-fill-color: var(--text-color-pagination); // текст черного цвета
-    transition: background-color 5000s ease-in-out 0s; // замедляем анимацию изменения цвета
+  // прозрачный фон
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  // указываем цвет текста
+  -webkit-text-fill-color: var(--text-color-pagination);
+  // замедляем анимацию изменения цвета - не работает для transparent
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 // Стили для скрытия
@@ -26,4 +29,29 @@ textarea:-webkit-autofill {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Обязательное поле с ошибкой */
+input:invalid {
+  outline: 2px solid red;
+}
+
+// Валидное поле
+input:valid {
+  outline: 2px solid green;
+}
+
+// Поля в фокусе
+input:focus {
+  outline: 2px solid blue;
+}
+
+// Стили для обязательных полей
+input:required {
+  outline: 1px solid orange;
+}
+
+// Стили для необязательных полей
+input:optional {
+  outline: 1px solid gray;
 }

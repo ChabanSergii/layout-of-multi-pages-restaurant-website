@@ -1,18 +1,27 @@
 <section class="contact-form section__background spoon-crossing-bottom-left">
   <div class="container contact-form__container">
     <div class="contact-form__content">
-      <form action="#!" method="post" class="contact-form__list" autocomplete="off">
+      <form action="https://httpbin.org/post" method="post" class="contact-form__list" autocomplete="off" id="contact-us-form" novalidate>
 
-        <label for="user_name" class="sr-only">Full Name</label>
-        <input type="text" name="user_name" id="name" minlength="3" maxlength="25" required placeholder="Full Name" class="contact-form__item">
+        <div class="form-group">
+          <label for="name" class="sr-only">Full Name</label>
+          <input type="text" name="name" id="name" minlength="3" maxlength="25" required placeholder="Full Name" class="contact-form__item">
+          <span class="error-message" aria-live="polite"></span>
+        </div>
 
-        <label for="user_email"  class="sr-only">Email Address</label>
-        <input type="email" name="user_email" id="mail" required minlength="12" maxlength="35" placeholder="Email Address" class="contact-form__item">
+        <div class="form-group">
+          <label for="email"  class="sr-only">Email Address</label>
+          <input type="email" name="email" id="mail" required minlength="12" maxlength="35" placeholder="Email Address" class="contact-form__item">
+          <span class="error-message" aria-live="polite"></span>
+        </div>
 
-        <label for="message" class="sr-only">Message</label>
-        <textarea name="message" id="message" class="contact-form__text" placeholder="Message" minlength="10" maxlength="325"></textarea>
+        <div class="form-group">
+          <label for="message" class="sr-only">Message</label>
+          <textarea name="message" id="message" class="contact-form__text" placeholder="Message" minlength="10" maxlength="325" required></textarea>
+          <span class="error-message" aria-live="polite"></span>
+        </div>
 
-        <button class="btn contact-form" type="submit">Subscribe</button>
+        <button class="btn contact-form" type="submit" aria-label="Subscribe Us">Subscribe</button>
       </form>
     </div>
     <div class="contact-form__picture">
