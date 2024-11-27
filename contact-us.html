@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Gericht Contact-us page of the bar">
@@ -10,7 +8,11 @@
   <link rel="stylesheet" href="./css/main.min.css">
   <!-- Add map script -->
   <link rel="stylesheet" href="./css/leaflet.css">
-</head>
+<link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg">
+<link rel="shortcut icon" href="./images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+<link rel="manifest" href="./images/favicon/site.webmanifest"></head>
 <body>
   <div class="wrapper">
     <header class="header">
@@ -60,7 +62,7 @@
                     </li>
                     <li class="header__item">
                         <div class="header__btn-set">
-                            <button class="header__btn-login">Log in&#160;/ registration</button>
+                            <button class="header__btn-login">Log in&nbsp;/ registration</button>
                             <button class="header__btn-book">book table</button>
                         </div>
                     </li>
@@ -70,14 +72,14 @@
                 <div class="nav-icon"></div>
             </button>
             <div class="header__btn-set">
-                <button class="header__btn-login" aria-label="Log in">Log in&#160;/ registration</button>
+                <button class="header__btn-login" aria-label="Log in">Log in&nbsp;/ registration</button>
                 <span class="vertical-line">
                     <svg xmlns="http://www.w3.org/2000/svg" width="2" height="57" viewBox="0 0 2 57" fill="none">
-                        <path d="M1 0C1 22.2599 1 34.7401 1 57" stroke="url(#paint0_radial_572_128)"/>
+                        <path d="M1 0C1 22.2599 1 34.7401 1 57" stroke="url(#paint0_radial_572_128)"></path>
                         <defs>
                         <radialGradient id="paint0_radial_572_128" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1.5 28.5) rotate(90) scale(28.5 0.5)">
-                            <stop offset="0.588542" stop-color="white"/>
-                            <stop offset="1" stop-color="white" stop-opacity="0"/>
+                            <stop offset="0.588542" stop-color="white"></stop>
+                            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
                         </radialGradient>
                         </defs>
                         <!-- TODO Заменить делиметр -->
@@ -88,9 +90,7 @@
         </div>
         <!-- TODO сделать скрол -->
         <!-- TODO сдерать быстрое перемещение с подвала в шапку -->
-
     </header>
-
       <main class="main">
         <section class="home-item-hero">
           <div class="container home-item-hero__container">
@@ -105,43 +105,43 @@
             </div>
             <div class="swiper home-item-hero__swiper">
               <div class="swiper-wrapper">
-
                 <div class="swiper-slide home-item-hero__slider">
                   <h2 class="home-item-hero__title"></h2>
                   <picture><source srcset="./images/home-hero-item-1.webp" type="image/webp"><img src="./images/home-hero-item-1.jpg" loading="lazy" alt="bar home-item-hero" class="home-item-hero__img"></picture>
                 </div>
-
                 <div class="swiper-slide home-item-hero__slider">
                   <h2 class="home-item-hero__title"></h2>
                   <picture><source srcset="./images/home-hero-item-2.webp" type="image/webp"><img src="./images/home-hero-item-2.jpg" loading="lazy" alt="bar home-item-hero" class="happy-hours__img"></picture>
                 </div>
-
               </div>
             </div>
           </div>
         </section>
-
         <section class="map spoon-crossing-bottom-right" aria-labelledby="map-title">
           <div class="container map__container">
             <div id="map" class="map__mask" aria-label="Карта с расположением ресторана"></div>
           </div>
         </section>
-
         <section class="contact-form section__background spoon-crossing-bottom-left">
           <div class="container contact-form__container">
             <div class="contact-form__content">
-              <form action="#!" method="post" class="contact-form__list" autocomplete="off">
-
-                <label for="user_name" class="sr-only">Full Name</label>
-                <input type="text" name="user_name" id="name" minlength="3" maxlength="25" required placeholder="Full Name" class="contact-form__item">
-
-                <label for="user_email" class="sr-only">Email Address</label>
-                <input type="email" name="user_email" id="mail" required minlength="12" maxlength="35" placeholder="Email Address" class="contact-form__item">
-
-                <label for="message" class="sr-only">Message</label>
-                <textarea name="message" id="message" class="contact-form__text" placeholder="Message" minlength="10" maxlength="325"></textarea>
-
-                <button class="btn contact-form" type="submit">Subscribe</button>
+              <form action="https://httpbin.org/post" method="post" class="contact-form__list" autocomplete="off" id="contact-us-form" novalidate="">
+                <div class="form-group">
+                  <label for="name" class="sr-only">Full Name</label>
+                  <input type="text" name="name" id="name" minlength="3" maxlength="25" required="" placeholder="Full Name" class="contact-form__item">
+                  <span class="error-message" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="sr-only">Email Address</label>
+                  <input type="email" name="email" id="mail" required="" minlength="12" maxlength="35" placeholder="Email Address" class="contact-form__item">
+                  <span class="error-message" aria-live="polite"></span>
+                </div>
+                <div class="form-group">
+                  <label for="message" class="sr-only">Message</label>
+                  <textarea name="message" id="message" class="contact-form__text" placeholder="Message" minlength="10" maxlength="325" required=""></textarea>
+                  <span class="error-message" aria-live="polite"></span>
+                </div>
+                <button class="btn contact-form" type="submit" aria-label="Subscribe Us">Subscribe</button>
               </form>
             </div>
             <div class="contact-form__picture">
@@ -149,26 +149,27 @@
             </div>
           </div>
         </section>
-
         <section class="subscribe">
           <div class="container subscribe__container">
             <div class="subscribe__wrapper not-transparent">
               <h5 class="subheading-center spoon subscribe__subheading">
                 Newsletter
               </h5>
-              <h2 class="title subscribe__title">Subscribe to&#160;Our Newsletter</h2>
+              <h2 class="title subscribe__title">Subscribe to&nbsp;Our Newsletter</h2>
               <p class="text-description subscribe__description">
                 And never miss latest Updates!
               </p>
-              <form action="!action" class="subscribe__form">
-                <label for="email" class="sr-only">Email Address</label>
-                <input type="email" name="email" class="subscribe__input" autocomplete="off" required placeholder="Email Address" maxlength="35" minlength="12">
+              <form action="https://httpbin.org/post" class="subscribe__form" id="subscribe-us-form" autocomplete="off" method="post" novalidate="">
+                <div class="form-group">
+                  <label for="email" class="sr-only">Email Address</label>
+                  <input type="email" name="email" class="subscribe__input" autocomplete="off" required="" placeholder="Email Address" maxlength="35" minlength="12">
+                  <span class="error-message" aria-live="polite"></span>
+                </div>
                 <button class="btn subscribe__btn" type="submit" aria-label="subscribe button">Subscribe</button>
               </form>
             </div>
           </div>
         </section>
-
       </main>
     <footer class="footer section__background">
         <div class="container footer__container">
@@ -177,7 +178,7 @@
                     <h3 class="footer__title title-small">Contact Us</h3>
                     <address class="footer__address">
                         <ul class="footer__list">
-                            <li class="footer__item text-description">9 W&#160;53rd St, New York, NY&#160;10019, USA</li>
+                            <li class="footer__item text-description">9 W&nbsp;53rd St, New York, NY&nbsp;10019, USA</li>
                             <li class="footer__item text-description">
                                 <a href="tel:+1 212-344-1230">+1 212-344-1230</a>
                             </li>
@@ -190,7 +191,7 @@
                 <div class="footer__block footer__block-logo">
                     <h2 class="footer__logo title">Gerícht</h2>
                     <p class="footer__text text-description spoon">
-                        &#171;The best way to&#160;find yourself is&#160;to&#160;lose yourself in&#160;the service of&#160;others.&#187;
+                        «The best way to&nbsp;find yourself is&nbsp;to&nbsp;lose yourself in&nbsp;the service of&nbsp;others.»
                     </p>
                     <ul class="social__list">
                         <li class="social__item">
@@ -218,7 +219,7 @@
                                 <div class="footer__day">Monday-Friday:</div>
                                 <div class="footer__time" tabindex="0">
                                     <time datetime="08:00">08:00</time>
-                                    am&#160;&#8212;
+                                    am&nbsp;—
                                     <time datetime="12:00">12:00</time>
                                     am</div>
                             </li>
@@ -226,7 +227,7 @@
                                 <div class="footer__day">Saturday-Sunday:</div>
                                 <div class="footer__time" tabindex="0">
                                     <time datetime="07:00">07:00</time>
-                                    am&#160;&#8212;
+                                    am&nbsp;—
                                     <time datetime="11:00">11:00</time>
                                     pm
                                 </div>
@@ -239,13 +240,12 @@
         </div>
         <!-- FIXME: сделать ховер на соцсети -->
     </footer>
-
   </div>
   <script src="./js/index.bundle.js"></script>
   <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/scrollTop.bundle.js"></script>
   <script src="./js/leaflet.js"></script>
-
+  <script src="./js/form_validation.bundle.js"></script>
+  <script src="./js/scrollTop.bundle.js"></script>
   <script>
     var swiper = new Swiper(".home-item-hero__swiper", {
       spaceBetween: 30,
@@ -258,11 +258,9 @@
       },
     });
   </script>
-
   <script>
     // Инициализация карты
     const map = L.map('map').setView([40.76127879164621, -73.97678243742837], 20); // Замените координаты на нужные (пример: USA)
-
     // Добавление слоя карты OpenStreetMap
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
@@ -284,15 +282,12 @@
       direction: "top",    // Расположение подсказки относительно маркера
       className: "custom-tooltip", // Класс для кастомных стилей
     });
-
     // События: показываем и скрываем подсказку
     marker.on('mouseover', function () {
       this.openTooltip(); // Показываем подсказку
     });
-
     marker.on('mouseout', function () {
       this.closeTooltip(); // Скрываем подсказку
     });
   </script>
-</body>
-</html>
+</body></html>
