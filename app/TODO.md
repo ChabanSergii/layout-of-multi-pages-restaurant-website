@@ -6,9 +6,9 @@
 | index.html | 41 | перенести скрипты в отдельный файл
 | index.html | 42 | перенастроить нормалайзы
 | base\_decor.scss | 38 | Сделать стили, как с ложкой.
-| components\header.html | 68 | Заменить делиметр
-| components\header.html | 74 | сделать скрол
-| components\header.html | 75 | сдерать быстрое перемещение с подвала в шапку
+| components\header.html | 149 | Заменить делиметр
+| components\header.html | 155 | сделать скрол
+| components\header.html | 156 | сдерать быстрое перемещение с подвала в шапку
 
 ### FIXMEs
 | Filename | line # | FIXME

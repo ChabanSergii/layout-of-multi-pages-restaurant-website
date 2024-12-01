@@ -1,57 +1,73 @@
 @mixin flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header {
+  overflow: visible;
     &__container {
-        padding: 32px 132px;
-        @include flex();
+      padding: 32px 132px;
+      @include flex();
     }
 
     &__logo {
-        margin-right: 166px;
-        font-family: var(--font-accent);
-        font-size: 44px;
-        font-weight: 700;
-        letter-spacing: 1.76px;
-        text-transform: uppercase;
-        line-height: 130%
+      margin-right: 166px;
+      font-family: var(--font-accent);
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 1.76px;
+      text-transform: uppercase;
+      line-height: 130%
     }
 
     &__list {
-        margin-left: 20px;
-        margin-right: 20px;
-        gap: 0 32px;
-        font-family: var(--font-main);
-        font-size: 16px;
-        letter-spacing: 0.64px;
-        font-weight: 400;
-        text-transform: capitalize;
-        @include flex();
+      margin-left: 20px;
+      margin-right: 20px;
+      gap: 0 32px;
+      font-family: var(--font-main);
+      font-size: 16px;
+      letter-spacing: 0.64px;
+      font-weight: 400;
+      text-transform: capitalize;
+      @include flex();
+      position: relative;
     }
-
+    &__list a {
+      display: block;
+    }
     &__btn-login:hover,
     &__btn-book:hover,
     &__link:hover {
-        color: var(--title-color);
-        transition: color .3s linear;
+      color: var(--title-color);
+      transition: color .3s linear;
     }
-
+    &__sublist{
+      padding: 15px;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 999;
+      background-color: var(--page-bg);
+      border-radius: 6px;
+    }
+    &__subitem{
+      padding: 10px;
+    }
     &__item:last-child {
-        display: none;
+      display: none;
     }
 
     &__btn-login,
     &__btn-book {
-        font-family: var(--font-main);
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 175%;
-        letter-spacing: 0.8px;
-        text-transform: capitalize;
-        color: var(--text-color);
+      font-family: var(--font-main);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 175%;
+      letter-spacing: 0.8px;
+      text-transform: capitalize;
+      color: var(--text-color);
     }
 
     &__btn-set {
@@ -59,7 +75,16 @@
     }
 
     .vertical-line {
-        margin-left: 50px;
-        margin-right: 50px;
+      margin-left: 50px;
+      margin-right: 50px;
     }
+}
+.header__sublist:hover,
+.header__item:hover .header__sublist{
+  display: block;
+
+}
+
+.header__item:hover {
+  position: relative;
 }
