@@ -9,8 +9,8 @@
 
   &__wrapper {
     padding: 64px 252px;
-    border: 1px solid rgba(220, 202, 135, 0.20);
-    box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.70);
+    border: 1px solid var(--border-form-color);
+    box-shadow: 22px 30px 95px 1px var(--border-form-box-shadow);
   }
 
   &__title {
@@ -36,7 +36,14 @@
     padding: 16px 19px;
     flex-grow: 3;
     background: transparent;
-    border: 1px solid rgba(220, 202, 135, 0.20);
+    border: 1px solid var(--border-form-color);
     color: var(--accent);
   }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
 }

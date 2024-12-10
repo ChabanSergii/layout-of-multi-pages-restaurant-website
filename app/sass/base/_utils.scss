@@ -32,26 +32,27 @@ textarea:-webkit-autofill {
 }
 
 /* Обязательное поле с ошибкой */
-input:invalid {
-  outline: 2px solid red;
-}
+//input:invalid {
+//  outline: 2px solid red;
+//}
+
 
 // Валидное поле
-input:valid {
-  outline: 2px solid green;
-}
+//input:valid {
+//  outline: 2px solid var(--title-color);
+//}
 
 // Поля в фокусе
 input:focus {
-  outline: 2px solid blue;
+  outline: 2px solid var(--title-color);
 }
 
 // Стили для обязательных полей
-input:required {
-  outline: 1px solid orange;
-}
+//input:required {
+//  outline: 1px solid var(--title-color);
+//}
 
 // Стили для необязательных полей
-input:optional {
-  outline: 1px solid gray;
-}
+//input:optional {
+//  outline: 1px solid var(--title-color);
+//}

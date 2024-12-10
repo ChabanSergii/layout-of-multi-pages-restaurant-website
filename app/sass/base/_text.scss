@@ -69,6 +69,7 @@
   text-transform: capitalize;
 }
 
+.error-message,
 .role {
   margin-bottom: 64px;
   font-family: var(--font-main);
@@ -77,4 +78,12 @@
   font-weight: 400;
   line-height: 175%;
   letter-spacing: 0.64px;
+}
+
+.error-message {
+  margin-bottom: 0;
+  font-size: 12px;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
 }
