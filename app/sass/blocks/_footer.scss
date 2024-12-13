@@ -50,16 +50,22 @@
         width: 24px;
         height: 24px;
     }
-
-    .social__list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0 16px;
-    }
-
-    .copyright {
-        margin-top: 68px;
-        text-align: center;
-    }
 }
+
+.social__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 16px;
+}
+
+.social__link:hover svg{
+    fill: var(--title-color);
+    transition: fill 0.3s linear;
+}
+
+.copyright {
+    margin-top: 68px;
+    text-align: center;
+}
+

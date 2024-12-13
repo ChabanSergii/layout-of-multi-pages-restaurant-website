@@ -1,41 +1,59 @@
-/* Use only recommended task version for good work */
-const {src, dest}  = require('gulp');
+const {src, dest} = require('gulp');
+const svgSprite = require('gulp-svg-sprite');
+const plumber = require('gulp-plumber');
+const path = require('../config/path.js');
 
-/* Configs */
-const path         = require('../config/path.js');
-
-/* Plugins */
-const svgSprite    = require('gulp-svg-sprite');
-const plumber      = require('gulp-plumber');
-
-
-/* SVG */
 function sprite() {
   const config = {
     mode: {
       stack: {
-        sprite: '../sprite.svg', // Путь для файла спрайта
-        example: true // Генерация HTML примера
+        sprite: '../sprite.svg', // Path to the sprite file
+        example: true // Generate an HTML example
+      }
+    },
+    shape: {
+      transform: [
+        {
+          svgo: {
+            plugins: [
+              {
+                name: 'removeAttrs',
+                params: {
+                  attrs: '(fill|stroke)', // Remove fill and stroke by default
+                }
+              }
+            ]
+          }
+        }
+      ],
+      meta: file => {
+        // Skip removing attributes for files starting with "decor"
+        const fileName = file.match(/[^/\\]+$/)[0]; // Extract file name
+        if (/^decor/i.test(fileName)) {
+          return {removeAttrs: false};
+        }
+        return {};
       }
     }
   };
 
-  // Генерация stack и сохранение в первую папку
-  return src(path.svg.srcsvg, { encoding: false })
-    .pipe(plumber({
-      errorHandler(err) {
-        console.error("Ошибка при создании SVG-спрайта:", err);
-        this.emit('end'); // Завершить поток
-      }
-    }))
+  // Generate stack sprite and save it in the first folder
+  return src(path.svg.srcsvg, {encoding: false})
+    .pipe(
+      plumber({
+        errorHandler(err) {
+          console.error('SVG sprite creation error:', err);
+          this.emit('end'); // End the stream
+        }
+      })
+    )
     .pipe(svgSprite(config))
-    .pipe(dest(path.svg.srcmin)) // Папка для stack
+    .pipe(dest(path.svg.srcmin)) // Folder for the stack sprite
     .on('end', () => {
-      // Копирование спрайта в другую папку после создания
-      src('app/images/sprite.svg', { allowEmpty: true })
-        .pipe(dest(path.svg.dest)); // Папка для sprite
+      // Copy sprite to another folder after creation
+      src(`${path.svg.srcmin}/sprite.svg`, {allowEmpty: true})
+        .pipe(dest(path.svg.dest)); // Destination folder for the sprite
     });
 }
-
 
 module.exports = sprite;

@@ -1,3 +1,8 @@
+@mixin hover-gold{
+  color: var(--title-color);
+  transition: color 0.3s linear;
+}
+
 .team{
   &__container{
     margin: 152px 0;
@@ -10,17 +15,45 @@
   &__card{
     position: relative;
     cursor: pointer;
-  }
-  &__social {
-    &.none {
-      visibility: hidden; // Изначально элемент скрыт
-      opacity: 0; // Для анимации плавного появления
-      transition: visibility 0s, opacity 0.3s; // Настройка анимации
-
-      &:hover {
-        visibility: visible; // Показываем элемент
-        opacity: 1; // Делаем элемент полностью видимым
+    &:hover {
+      .team__ava{
+        filter: grayscale(60%);
+        transition: filter 0.3s ease-in-out;
       }
+      .team__social{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+      .team__name{
+        @include hover-gold();
+      }
+    }
+  }
+  &__name{
+    color: var(--text-color);
+  }
+  &__role{
+    &.role{
+      margin-bottom: 0;
+    }
+  }
+  &__social{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 116px;
+  }
+  &__link{
+    margin-top: 16px;
+    display: block;
+    font-style: normal;
+    text-align: center;
+    &:hover{
+      @include hover-gold()
     }
   }
 }

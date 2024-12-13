@@ -54,7 +54,7 @@ function watching() {
     watch([path.page.app]).on('change', browserSync.reload)                 /* for pug and page tasks */
     watch([path.page.components, path.page.watch], page).on('all', browserSync.reload)
     watch([path.scss.watch], scss).on('all', browserSync.reload)
-    watch([path.js.todo, path.scss.todo, path.page.todo], todoFinder)
+    /* watch([path.js.todo, path.scss.todo, path.page.todo], todoFinder) засоряет консоль в консоли*/
     /* If use PUG */
     /* watch([path.pug.watch], pug).on('all', browserSync.reload) */
 }
